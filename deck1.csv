@@ -1,0 +1,115 @@
+colorIdentity,colors,convertedManaCost,keywords,manaCost,name,power,supertypes,text,toughness,types,faceConvertedManaCost,faceManaValue,faceName,otherFaceIds,side,producedMana,loyalty,isAlternative
+['U'],['U'],5.0,"['Flying', 'Prepared', 'Ward']",{3}{U}{U},Emeritus of Ideation // Ancestral Recall,5,[],"Flying, ward {2}
+This creature enters prepared.
+Whenever this creature attacks, you may exile eight cards from your graveyard. If you do, this creature becomes prepared.",5,['Creature'],5.0,5.0,Emeritus of Ideation,['53f078ee-77fb-50fe-90a2-537c533321ef'],a,,,
+"['R', 'W']","['R', 'W']",2.0,,{R}{W},Spirit Mascot,2,[],"Whenever one or more cards leave your graveyard, put a +1/+1 counter on this creature.",2,['Creature'],,,,,,,,
+['G'],['G'],5.0,"['Infusion', 'Vigilance']",{4}{G},Tenured Concocter,4,[],"Vigilance
+Whenever this creature becomes the target of a spell or ability an opponent controls, you may draw a card.
+Infusion — This creature gets +2/+0 as long as you gained life this turn.",5,['Creature'],,,,,,,,
+"['B', 'W']","['B', 'W']",3.0,,{1}{W}{B},"Nita, Forum Conciliator",2,['Legendary'],"Whenever you cast a spell you don't own, put a +1/+1 counter on each creature you control.
+{2}, Sacrifice another creature: Exile target instant or sorcery card from an opponent's graveyard. You may cast it this turn, and mana of any type can be spent to cast that spell. If that spell would be put into a graveyard, exile it instead. Activate only as a sorcery.",3,['Creature'],,,,,,,,
+['W'],['W'],4.0,"['First strike', 'Prepared']",{3}{W},Honorbound Page // Forum's Favor,3,[],"First strike
+This creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",3,['Creature'],4.0,4.0,Honorbound Page,['0e5fef9a-75e3-55f0-adaf-fb58d285fcdd'],a,,,
+['U'],['U'],3.0,,{1}{U}{U},Mana Sculpt,,[],"Counter target spell. If you control a Wizard, add an amount of {C} equal to the amount of mana spent to cast that spell at the beginning of your next main phase.",,['Instant'],,,,,,['C'],,
+['G'],['G'],1.0,['Increment'],{G},Ambitious Augmenter,1,[],"Increment (Whenever you cast a spell, if the amount of mana you spent is greater than this creature's power or toughness, put a +1/+1 counter on this creature.)
+When this creature dies, if it had one or more counters on it, create a 0/0 green and blue Fractal creature token, then put this creature's counters on that token.",1,['Creature'],,,,,,,,
+['B'],['B'],4.0,,{3}{B},Wander Off,,[],Exile target creature.,,['Instant'],,,,,,,,
+['B'],['B'],6.0,"['Repartee', 'Ward']",{5}{B},Forum Necroscribe,5,[],"Ward—Discard a card.
+Repartee — Whenever you cast an instant or sorcery spell that targets a creature, return target creature card from your graveyard to the battlefield.",4,['Creature'],,,,,,,,
+"['G', 'U']","['G', 'U']",2.0,,{G}{U},Geometer's Arthropod,1,[],"Whenever you cast a spell with {X} in its mana cost, look at the top X cards of your library. Put one of them into your hand and the rest on the bottom of your library in a random order.",4,['Creature'],,,,,,,,
+"['G', 'U']","['G', 'U']",2.0,"['Flash', 'Flying', 'Increment', 'Trample']",{G}{U},Cuboid Colony,1,[],"Flash
+Flying, trample
+Increment (Whenever you cast a spell, if the amount of mana you spent is greater than this creature's power or toughness, put a +1/+1 counter on this creature.)",1,['Creature'],,,,,,,,
+"['G', 'U']","['G', 'U']",4.0,,{2}{G}{U},Applied Geometry,,[],"Create a token that's a copy of target non-Aura permanent you control, except it's a 0/0 Fractal creature in addition to its other types. Put six +1/+1 counters on it.",,['Sorcery'],,,,,,,,
+['W'],['W'],2.0,['Surveil'],{1}{W},Stone Docent,3,[],"{W}, Exile this card from your graveyard: You gain 2 life. Surveil 1. Activate only as a sorcery. (Look at the top card of your library. You may put it into your graveyard.)",1,['Creature'],,,,,,,,
+['U'],['U'],5.0,['Surveil'],{4}{U},Muse's Encouragement,,[],"Create a 3/3 blue and red Elemental creature token with flying.
+Surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",,['Instant'],,,,,,,,
+[],[],6.0,['Converge'],{6},Sundering Archaic,3,[],"Converge — When this creature enters, exile target nonland permanent an opponent controls with mana value less than or equal to the number of colors of mana spent to cast this creature.
+{2}: Put target card from a graveyard on the bottom of its owner's library.",3,['Creature'],,,,,,,,
+['R'],['R'],2.0,['Flashback'],{1}{R},Tome Blast,,[],"Tome Blast deals 2 damage to any target.
+Flashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",,['Sorcery'],,,,,,,,
+"['B', 'W']","['B', 'W']",2.0,,{W}{B},Silverquill Charm,,[],"Choose one —
+• Put two +1/+1 counters on target creature.
+• Exile target creature with power 2 or less.
+• Each opponent loses 3 life and you gain 3 life.",,['Instant'],,,,,,,,
+"['B', 'G']",[],0.0,,,Deathcap Glade,,[],"This land enters tapped unless you control two or more other lands.
+{T}: Add {B} or {G}.",,['Land'],,,,,,"['B', 'G']",,
+"['G', 'U']","['G', 'U']",2.0,,{G}{U},Quandrix Charm,,[],"Choose one —
+• Counter target spell unless its controller pays {2}.
+• Destroy target enchantment.
+• Target creature has base power and toughness 5/5 until end of turn.",,['Instant'],,,,,,,,
+['B'],['B'],3.0,['Infusion'],{2}{B},Poisoner's Apprentice,2,[],"Infusion — When this creature enters, target creature an opponent controls gets -4/-4 until end of turn if you gained life this turn.",2,['Creature'],,,,,,,,
+['U'],['U'],2.0,,{X}{X}{U}{U},Mathemagics,,[],"Target player draws 2ˣ cards. (2⁰ = 1, 2¹ = 2, 2² = 4, 2³ = 8, 2⁴ = 16, 2⁵ = 32, and so on.)",,['Sorcery'],,,,,,,,
+"['G', 'U']","['U', 'G']",4.0,"['Landfall', 'Prepared']",{2}{G}{U},"Tam, Observant Sequencer // Deep Sight",4,['Legendary'],"Landfall — Whenever a land you control enters, Tam becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",3,['Creature'],4.0,4.0,"Tam, Observant Sequencer",['fffd0537-882d-5774-b01f-c16ad20a96b4'],a,,,
+['U'],['U'],1.0,,{X}{X}{U},Divergent Equation,,[],"Return up to X target instant and/or sorcery cards from your graveyard to your hand.
+Exile Divergent Equation.",,['Instant'],,,,,,,,
+['U'],['U'],2.0,['Opus'],{1}{U},Muse Seeker,1,[],"Opus — Whenever you cast an instant or sorcery spell, draw a card. Then discard a card unless five or more mana was spent to cast that spell.",2,['Creature'],,,,,,,,
+['G'],['G'],1.0,['Surveil'],{X}{G},Wild Hypothesis,,[],"Create a 0/0 green and blue Fractal creature token. Put X +1/+1 counters on it.
+Surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",,['Sorcery'],,,,,,,,
+['G'],['G'],2.0,['Infusion'],{1}{G},Lumaret's Favor,,[],"Infusion — When you cast this spell, copy it if you gained life this turn. You may choose new targets for the copy.
+Target creature gets +2/+4 until end of turn.",,['Instant'],,,,,,,,
+['B'],['B'],4.0,,{3}{B},Eternal Student,4,[],"{1}{B}, Exile this card from your graveyard: Create two 1/1 white and black Inkling creature tokens with flying.",2,['Creature'],,,,,,,,
+"['R', 'W']","['R', 'W']",4.0,['Mill'],{2}{R}{W},Ark of Hunger,,[],"Whenever one or more cards leave your graveyard, this artifact deals 1 damage to each opponent and you gain 1 life.
+{T}: Mill a card. You may play that card this turn.",,['Artifact'],,,,,,,,
+['B'],['B'],4.0,['Prepared'],{3}{B},Emeritus of Woe // Demonic Tutor,5,[],"This creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
+At the beginning of your end step, if two or more creatures died this turn, this creature becomes prepared.",4,['Creature'],4.0,4.0,Emeritus of Woe,['d70a6d24-c5dc-581a-be54-3c4c24f1943d'],a,,,
+"['B', 'G']","['B', 'G']",3.0,,{1}{B}{G},Mind Roots,,[],Target player discards two cards. Put up to one land card discarded this way onto the battlefield tapped under your control.,,['Sorcery'],,,,,,,,
+['W'],['W'],1.0,['Prepared'],{W},Elite Interceptor // Rejoinder,1,[],"This creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",2,['Creature'],1.0,1.0,Elite Interceptor,['b98f5645-9f5b-5d0f-94f3-746eaa59106e'],a,,,
+"['G', 'U']","['G', 'U']",2.0,['Flying'],{X}{G}{U},Pterafractyl,1,[],"Flying
+This creature enters with X +1/+1 counters on it.
+When this creature enters, you gain 2 life.",0,['Creature'],,,,,,,,
+['U'],['U'],6.0,,{4}{U}{U},Homesickness,,[],"Target player draws two cards. Tap up to two target creatures. Put a stun counter on each of them. (If a permanent with a stun counter would become untapped, remove one from it instead.)",,['Instant'],,,,,,,,
+"['B', 'G']",[],0.0,['Surveil'],,Titan's Grave,,[],"This land enters tapped.
+{T}: Add {B} or {G}.
+{2}{B}{G}, {T}: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",,['Land'],,,,,,"['B', 'G']",,
+[],[],4.0,['Prepared'],{4},Biblioplex Tomekeeper,3,[],"When this creature enters, choose up to one —
+• Target creature becomes prepared. (Only creatures with prepare spells can become prepared.)
+• Target creature becomes unprepared.",4,"['Artifact', 'Creature']",,,,,,,,
+[],[],2.0,,{2},Diary of Dreams,,[],"Whenever you cast an instant or sorcery spell, put a page counter on this artifact.
+{5}, {T}: Draw a card. This ability costs {1} less to activate for each page counter on this artifact.",,['Artifact'],,,,,,,,
+['U'],['U'],3.0,['Opus'],{2}{U},Deluge Virtuoso,2,[],"When this creature enters, tap target creature an opponent controls and put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)
+Opus — Whenever you cast an instant or sorcery spell, this creature gets +1/+1 until end of turn. If five or more mana was spent to cast that spell, this creature gets +2/+2 until end of turn instead.",2,['Creature'],,,,,,,,
+"['B', 'W']","['B', 'W']",5.0,,{2}{W}{W/B}{B},Stirring Honormancer,4,[],"When this creature enters, look at the top X cards of your library, where X is the number of creatures you control. Put one of those cards into your hand and the rest into your graveyard.",5,['Creature'],,,,,,,,
+"['G', 'U']",[],0.0,,,Dreamroot Cascade,,[],"This land enters tapped unless you control two or more other lands.
+{T}: Add {G} or {U}.",,['Land'],,,,,,"['G', 'U']",,
+['U'],['U'],2.0,['Prepared'],{1}{U},Landscape Painter // Vibrant Idea,2,[],"This creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",1,['Creature'],2.0,2.0,Landscape Painter,['2a4cb9f6-18eb-5525-92d3-28594c0b4239'],a,,,
+['R'],['R'],3.0,['Mill'],{2}{R},Tablet of Discovery,,[],"When this artifact enters, mill a card. You may play that card this turn. (To mill a card, put the top card of your library into your graveyard.)
+{T}: Add {R}.
+{T}: Add {R}{R}. Spend this mana only to cast instant and sorcery spells.",,['Artifact'],,,,,,['R'],,
+['R'],['R'],2.0,"['First strike', 'Prepared']",{1}{R},Emeritus of Conflict // Lightning Bolt,2,[],"First strike
+Whenever you cast your third spell each turn, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",2,['Creature'],2.0,2.0,Emeritus of Conflict,['7ac2b614-e049-502e-b429-fc10190ebd8c'],a,,,
+['G'],['G'],2.0,['Infusion'],{1}{G},Lumaret's Favor,,[],"Infusion — When you cast this spell, copy it if you gained life this turn. You may choose new targets for the copy.
+Target creature gets +2/+4 until end of turn.",,['Instant'],,,,,,,,
+"['B', 'W']","['B', 'W']",4.0,,{2}{W}{B},Render Speechless,,[],"Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.
+Put two +1/+1 counters on up to one target creature.",,['Sorcery'],,,,,,,,
+"['B', 'W']","['B', 'W']",2.0,,{W}{B},Silverquill Charm,,[],"Choose one —
+• Put two +1/+1 counters on target creature.
+• Exile target creature with power 2 or less.
+• Each opponent loses 3 life and you gain 3 life.",,['Instant'],,,,,,,,
+"['G', 'U']","['G', 'U']",4.0,['Increment'],{2}{G}{U},"Berta, Wise Extrapolator",1,['Legendary'],"Increment (Whenever you cast a spell, if the amount of mana you spent is greater than this creature's power or toughness, put a +1/+1 counter on this creature.)
+Whenever one or more +1/+1 counters are put on Berta, add one mana of any color.
+{X}, {T}: Create a 0/0 green and blue Fractal creature token and put X +1/+1 counters on it.",4,['Creature'],,,,,,"['B', 'G', 'R', 'U', 'W']",,
+"['R', 'U']","['R', 'U']",2.0,,{X}{U}{R},Traumatic Critique,,[],"Traumatic Critique deals X damage to any target. Draw two cards, then discard a card.",,['Instant'],,,,,,,,
+['U'],['U'],1.0,,{U},Chase Inspiration,,[],Target creature you control gets +0/+3 and gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.),,['Instant'],,,,,,,,
+['B'],['B'],2.0,['Prepared'],{1}{B},Leech Collector // Bloodletting,2,[],"Whenever you gain life for the first time each turn, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",2,['Creature'],2.0,2.0,Leech Collector,['b823ace3-084c-53de-a3a6-0db193326ed5'],a,,,
+"['R', 'U']","['U', 'R']",2.0,"['Prepared', 'Treasure']",{U}{R},"Sanar, Unfinished Genius // Wild Idea",0,['Legendary'],"Sanar enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
+{T}: Create a Treasure token. Activate only if you've cast an instant or sorcery spell this turn.",4,['Creature'],2.0,2.0,"Sanar, Unfinished Genius",['1a431c3a-6f5f-5882-99f1-ddaaa8c07641'],a,,,
+['B'],['B'],5.0,['Prepared'],{4}{B},Scathing Shadelock // Venomous Words,4,[],"At the beginning of your first main phase, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",6,['Creature'],5.0,5.0,Scathing Shadelock,['52a7d535-43ee-5ef1-8af9-19eafef7e9fe'],a,,,
+['R'],['R'],2.0,"['First strike', 'Prepared']",{1}{R},Emeritus of Conflict // Lightning Bolt,2,[],"First strike
+Whenever you cast your third spell each turn, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",2,['Creature'],2.0,2.0,Emeritus of Conflict,['7ac2b614-e049-502e-b429-fc10190ebd8c'],a,,,
+['W'],['W'],2.0,,{1}{W},Rapier Wit,,[],"Tap target creature. If it's your turn, put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)
+Draw a card.",,['Instant'],,,,,,,,
+['U'],['U'],2.0,,{1}{U},Essence Scatter,,[],Counter target creature spell.,,['Instant'],,,,,,,,
+"['G', 'U']","['U', 'G']",4.0,"['Landfall', 'Prepared']",{2}{G}{U},"Tam, Observant Sequencer // Deep Sight",4,['Legendary'],"Landfall — Whenever a land you control enters, Tam becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",3,['Creature'],4.0,4.0,"Tam, Observant Sequencer",['fffd0537-882d-5774-b01f-c16ad20a96b4'],a,,,
+"['G', 'U']","['G', 'U']",5.0,"['Increment', 'Ward']",{3}{G}{U},Fractal Tender,3,[],"Ward {2}
+Increment (Whenever you cast a spell, if the amount of mana you spent is greater than this creature's power or toughness, put a +1/+1 counter on this creature.)
+At the beginning of each end step, if you put a counter on this creature this turn, create a 0/0 green and blue Fractal creature token and put three +1/+1 counters on it.",3,['Creature'],,,,,,,,
+['W'],['W'],2.0,['Lifelink'],{1}{W},Shattered Acolyte,2,[],"Lifelink
+{1}, Sacrifice this creature: Destroy target artifact or enchantment.",2,['Creature'],,,,,,,,
+"['B', 'G']","['B', 'G']",4.0,"['Infusion', 'Reach', 'Vigilance']",{2}{B}{G},Old-Growth Educator,4,[],"Vigilance, reach
+Infusion — When this creature enters, put two +1/+1 counters on it if you gained life this turn.",4,['Creature'],,,,,,,,
+"['R', 'W']","['R', 'W']",2.0,,{R}{W},Lorehold Charm,,[],"Choose one —
+• Each opponent sacrifices a nontoken artifact of their choice.
+• Return target artifact or creature card with mana value 2 or less from your graveyard to the battlefield.
+• Creatures you control get +1/+1 and gain trample until end of turn.",,['Instant'],,,,,,,,
+['B'],['B'],1.0,['Repartee'],{B},Lecturing Scornmage,1,[],"Repartee — Whenever you cast an instant or sorcery spell that targets a creature, put a +1/+1 counter on this creature.",1,['Creature'],,,,,,,,

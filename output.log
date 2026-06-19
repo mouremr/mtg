@@ -1,0 +1,182 @@
+Loading cards...
+
+--- Starting Game ---
+
+
+==================================================
+Turn 1 - Player 1  (Life: 20 | Hand: 7 | Board: 0)
+ Player 1 plays Swamp
+  [Main 1] Mana: {'W': 0, 'U': 0, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale']
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale']
+
+==================================================
+Turn 1 - Player 2  (Life: 20 | Hand: 7 | Board: 0)
+ Player 2 plays Plains
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Terramorphic Expanse', 'Wild Hypothesis', 'Forest', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe']
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Terramorphic Expanse', 'Wild Hypothesis', 'Forest', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe']
+
+==================================================
+Turn 2 - Player 1  (Life: 20 | Hand: 6 | Board: 1)
+  [Main 1] Mana: {'W': 0, 'U': 0, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate']
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate']
+
+==================================================
+Turn 2 - Player 2  (Life: 20 | Hand: 7 | Board: 1)
+ Player 2 plays Terramorphic Expanse
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 1}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Forest', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor']
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Forest', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor']
+
+==================================================
+Turn 3 - Player 1  (Life: 20 | Hand: 7 | Board: 1)
+  [Main 1] Mana: {'W': 0, 'U': 0, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Forum Necroscribe']
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Forum Necroscribe']
+   Player 1 discards Forum Necroscribe
+
+==================================================
+Turn 3 - Player 2  (Life: 20 | Hand: 7 | Board: 2)
+ Player 2 plays Forest
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 0, 'G': 1, 'C': 1}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', "Honorbound Page // Forum's Favor"]
+Player 2 casts Wild Hypothesis {G}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', "Honorbound Page // Forum's Favor"]
+
+==================================================
+Turn 4 - Player 1  (Life: 20 | Hand: 7 | Board: 1)
+  [Main 1] Mana: {'W': 0, 'U': 0, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Seize the Spoils']
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Seize the Spoils']
+   Player 1 discards Seize the Spoils
+
+==================================================
+Turn 4 - Player 2  (Life: 20 | Hand: 7 | Board: 3)
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 0, 'G': 1, 'C': 1}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', "Honorbound Page // Forum's Favor", 'Exhibition Tidecaller']
+Player 2 casts Wild Hypothesis {G}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', "Honorbound Page // Forum's Favor", 'Exhibition Tidecaller']
+   Player 2 discards Exhibition Tidecaller
+
+==================================================
+Turn 5 - Player 1  (Life: 20 | Hand: 7 | Board: 1)
+  [Main 1] Mana: {'W': 0, 'U': 0, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Sundering Archaic']
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Sundering Archaic']
+   Player 1 discards Sundering Archaic
+
+==================================================
+Turn 5 - Player 2  (Life: 20 | Hand: 7 | Board: 3)
+ Player 2 plays Mountain
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 1, 'G': 1, 'C': 1}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', "Honorbound Page // Forum's Favor"]
+Player 2 casts Wild Hypothesis {G}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', "Honorbound Page // Forum's Favor"]
+
+==================================================
+Turn 6 - Player 1  (Life: 20 | Hand: 7 | Board: 1)
+  [Main 1] Mana: {'W': 0, 'U': 0, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Burrog Banemaker']
+Player 1 casts Burrog Banemaker {B}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate']
+
+==================================================
+Turn 6 - Player 2  (Life: 20 | Hand: 7 | Board: 4)
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 1, 'G': 1, 'C': 1}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', "Honorbound Page // Forum's Favor", 'Sneering Shadewriter']
+Player 2 casts Wild Hypothesis {G}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', "Honorbound Page // Forum's Favor", 'Sneering Shadewriter']
+   Player 2 discards Sneering Shadewriter
+
+==================================================
+Turn 7 - Player 1  (Life: 20 | Hand: 7 | Board: 2)
+  [Main 1] Mana: {'W': 0, 'U': 0, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Chelonian Tackle']
+    Player 1 attacks with: ['Burrog Banemaker']
+     Burrog Banemaker deals 1 damage to Player 2 (life: 19)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Chelonian Tackle']
+   Player 1 discards Chelonian Tackle
+
+==================================================
+Turn 7 - Player 2  (Life: 19 | Hand: 7 | Board: 4)
+ Player 2 plays Mountain
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 2, 'G': 1, 'C': 1}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', "Honorbound Page // Forum's Favor"]
+Player 2 casts Wild Hypothesis {G}
+Player 2 casts Honorbound Page // Forum's Favor {3}{W}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor']
+
+==================================================
+Turn 8 - Player 1  (Life: 20 | Hand: 7 | Board: 2)
+  [Main 1] Mana: {'W': 0, 'U': 0, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Emeritus of Abundance // Regrowth']
+    Player 1 attacks with: ['Burrog Banemaker']
+     Honorbound Page // Forum's Favor blocks Burrog Banemaker
+     Burrog Banemaker (1/1) vs Honorbound Page // Forum's Favor (3/3)
+Burrog Banemaker dies
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Emeritus of Abundance // Regrowth']
+   Player 1 discards Emeritus of Abundance // Regrowth
+
+==================================================
+Turn 8 - Player 2  (Life: 19 | Hand: 6 | Board: 6)
+ Player 2 plays Forum of Amity
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 2, 'G': 1, 'C': 2}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor']
+Player 2 casts Wild Hypothesis {G}
+    Player 2 attacks with: ["Honorbound Page // Forum's Favor"]
+     Honorbound Page // Forum's Favor deals 3 damage to Player 1 (life: 17)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor']
+
+==================================================
+Turn 9 - Player 1  (Life: 17 | Hand: 7 | Board: 1)
+  [Main 1] Mana: {'W': 0, 'U': 0, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Brush Off']
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Brush Off']
+   Player 1 discards Brush Off
+
+==================================================
+Turn 9 - Player 2  (Life: 19 | Hand: 6 | Board: 7)
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 2, 'G': 1, 'C': 2}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', 'Magmablood Archaic']
+Player 2 casts Wild Hypothesis {G}
+Player 2 casts Magmablood Archaic {0}
+    Player 2 attacks with: ["Honorbound Page // Forum's Favor"]
+     Honorbound Page // Forum's Favor deals 3 damage to Player 1 (life: 14)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor']
+
+==================================================
+Turn 10 - Player 1  (Life: 14 | Hand: 7 | Board: 1)
+ Player 1 plays Plains
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Mage Tower Referee', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate']
+Player 1 casts Mage Tower Referee {2}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate']
+
+==================================================
+Turn 10 - Player 2  (Life: 19 | Hand: 6 | Board: 8)
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 2, 'G': 1, 'C': 2}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', 'Echocasting Symposium']
+Player 2 casts Wild Hypothesis {G}
+    Player 2 attacks with: ["Honorbound Page // Forum's Favor", 'Magmablood Archaic']
+     Mage Tower Referee blocks Honorbound Page // Forum's Favor
+     Honorbound Page // Forum's Favor (3/3) vs Mage Tower Referee (2/1)
+     Magmablood Archaic deals 2 damage to Player 1 (life: 12)
+Mage Tower Referee dies
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', 'Echocasting Symposium']
+
+==================================================
+Turn 11 - Player 1  (Life: 12 | Hand: 6 | Board: 2)
+ Player 1 plays Mountain
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 1, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate']
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate']
+
+==================================================
+Turn 11 - Player 2  (Life: 19 | Hand: 7 | Board: 8)
+ Player 2 plays Forest
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 2, 'G': 2, 'C': 2}  Hand: ['Aberrant Manawurm', 'Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', 'Echocasting Symposium']
+Player 2 casts Wild Hypothesis {G}
+Player 2 casts Aberrant Manawurm {3}{G}
+    Player 2 attacks with: ["Honorbound Page // Forum's Favor", 'Magmablood Archaic']
+     Honorbound Page // Forum's Favor deals 3 damage to Player 1 (life: 9)
+     Magmablood Archaic deals 2 damage to Player 1 (life: 7)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', 'Echocasting Symposium']
+
+==================================================
+Turn 12 - Player 1  (Life: 7 | Hand: 6 | Board: 3)
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 1, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Garrison Excavator']
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Comforting Counsel', 'Comforting Counsel', 'Landscape Painter // Vibrant Idea', 'Rearing Embermare', 'Spectacular Skywhale', 'Procrastinate', 'Garrison Excavator']
+
+==================================================
+Turn 12 - Player 2  (Life: 19 | Hand: 6 | Board: 10)
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 2, 'G': 2, 'C': 2}  Hand: ['Abigale, Poet Laureate // Heroic Stanza', 'Wild Hypothesis', 'Spellbook Seeker // Careful Study', 'Forum Necroscribe', 'Pensive Professor', 'Echocasting Symposium', 'Chase Inspiration']
+Player 2 casts Wild Hypothesis {G}
+    Player 2 attacks with: ["Honorbound Page // Forum's Favor", 'Magmablood Archaic', 'Aberrant Manawurm']
+     Honorbound Page // Forum's Favor deals 3 damage to Player 1 (life: 4)
+     Magmablood Archaic deals 2 damage to Player 1 (life: 2)
+     Aberrant Manawurm deals 2 damage to Player 1 (life: 0)
+
+Player 2 wins! (Player 1 reached 0 life)
+
+Result: Player 2 wins!
