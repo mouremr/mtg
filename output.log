@@ -6,164 +6,408 @@ Loading cards...
 ==================================================
 Turn 1 - Player 1  (Life: 20 | Hand: 7 | Board: 0)
  Player 1 plays Plains
-  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Landscape Painter // Vibrant Idea', 'Colorstorm Stallion', 'Swamp', 'Lorehold Charm', 'Mountain', 'Mountain']
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Landscape Painter // Vibrant Idea', 'Colorstorm Stallion', 'Swamp', 'Lorehold Charm', 'Mountain', 'Mountain']
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Mountain', 'Rancorous Archaic', 'Choreographed Sparks']
+Player 1 casts Erode {W}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Mountain', 'Rancorous Archaic', 'Choreographed Sparks']
 
 ==================================================
 Turn 1 - Player 2  (Life: 20 | Hand: 7 | Board: 0)
- Player 2 plays Swamp
-  [Main 1] Mana: {'W': 0, 'U': 0, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Island', 'Forum Necroscribe', 'Island']
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Island', 'Forum Necroscribe', 'Island']
+ Player 2 plays Forest
+  [Main 1] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 1, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Plains', 'Forest']
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Plains', 'Forest']
 
 ==================================================
 Turn 2 - Player 1  (Life: 20 | Hand: 6 | Board: 1)
- Player 1 plays Swamp
-  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Landscape Painter // Vibrant Idea', 'Colorstorm Stallion', 'Lorehold Charm', 'Mountain', 'Mountain', 'Island']
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Landscape Painter // Vibrant Idea', 'Colorstorm Stallion', 'Lorehold Charm', 'Mountain', 'Mountain', 'Island']
+ Player 1 plays Mountain
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 1, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind']
+Player 1 casts Erode {W}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind']
 
 ==================================================
 Turn 2 - Player 2  (Life: 20 | Hand: 7 | Board: 1)
- Player 2 plays Island
-  [Main 1] Mana: {'W': 0, 'U': 1, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Island', 'Mountain']
-Player 2 casts Fractalize {U}
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Island', 'Mountain']
+ Player 2 plays Plains
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 0, 'G': 1, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Forest', 'Swamp']
+Player 2 casts Follow the Lumarets {1}{G}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Forest', 'Swamp']
 
 ==================================================
 Turn 3 - Player 1  (Life: 20 | Hand: 6 | Board: 2)
- Player 1 plays Mountain
-  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 1, 'G': 0, 'C': 0}  Hand: ['Landscape Painter // Vibrant Idea', 'Colorstorm Stallion', 'Lorehold Charm', 'Mountain', 'Island', 'Mountain']
-Player 1 casts Lorehold Charm {W}{R}
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Landscape Painter // Vibrant Idea', 'Colorstorm Stallion', 'Lorehold Charm', 'Mountain', 'Island', 'Mountain']
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 1, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza']
+Player 1 casts Erode {W}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza']
 
 ==================================================
 Turn 3 - Player 2  (Life: 20 | Hand: 7 | Board: 2)
- Player 2 plays Island
-  [Main 1] Mana: {'W': 0, 'U': 2, 'B': 1, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Mountain', 'Mountain']
-Player 2 casts Fractalize {U}
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Mountain', 'Mountain']
+ Player 2 plays Forest
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 0, 'R': 0, 'G': 2, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Swamp', 'Lecturing Scornmage']
+Player 2 casts Follow the Lumarets {1}{G}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Swamp', 'Lecturing Scornmage']
 
 ==================================================
-Turn 4 - Player 1  (Life: 20 | Hand: 6 | Board: 3)
- Player 1 plays Mountain
-  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 2, 'G': 0, 'C': 0}  Hand: ['Landscape Painter // Vibrant Idea', 'Colorstorm Stallion', 'Lorehold Charm', 'Island', 'Mountain', 'Transcendent Archaic']
-Player 1 casts Lorehold Charm {W}{R}
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Landscape Painter // Vibrant Idea', 'Colorstorm Stallion', 'Lorehold Charm', 'Island', 'Mountain', 'Transcendent Archaic']
+Turn 4 - Player 1  (Life: 20 | Hand: 7 | Board: 2)
+ Player 1 plays Swamp
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 1, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza']
+Player 1 casts Erode {W}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza']
 
 ==================================================
 Turn 4 - Player 2  (Life: 20 | Hand: 7 | Board: 3)
- Player 2 plays Mountain
-  [Main 1] Mana: {'W': 0, 'U': 2, 'B': 1, 'R': 1, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Mountain', 'Elemental Mascot']
-Player 2 casts Fractalize {U}
-Player 2 casts Elemental Mascot {1}{U}{R}
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Mountain']
+ Player 2 plays Swamp
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 0, 'G': 2, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Lecturing Scornmage', 'Mountain']
+Player 2 casts Lecturing Scornmage {B}
+Player 2 casts Follow the Lumarets {1}{G}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Mountain']
 
 ==================================================
-Turn 5 - Player 1  (Life: 20 | Hand: 6 | Board: 4)
- Player 1 plays Island
-  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 2, 'G': 0, 'C': 0}  Hand: ['Landscape Painter // Vibrant Idea', 'Colorstorm Stallion', 'Lorehold Charm', 'Mountain', 'Transcendent Archaic', 'Mindful Biomancer']
-Player 1 casts Landscape Painter // Vibrant Idea {1}{U}
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Colorstorm Stallion', 'Lorehold Charm', 'Mountain', 'Transcendent Archaic', 'Mindful Biomancer']
+Turn 5 - Player 1  (Life: 20 | Hand: 7 | Board: 3)
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 1, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Cauldron of Essence']
+Player 1 casts Erode {W}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Cauldron of Essence']
+   Player 1 discards Cauldron of Essence
 
 ==================================================
 Turn 5 - Player 2  (Life: 20 | Hand: 6 | Board: 5)
  Player 2 plays Mountain
-  [Main 1] Mana: {'W': 0, 'U': 2, 'B': 1, 'R': 2, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Witherbloom Charm']
-Player 2 casts Fractalize {U}
-    Player 2 attacks with: ['Elemental Mascot']
-     Landscape Painter // Vibrant Idea blocks Elemental Mascot
-     Elemental Mascot (1/4) vs Landscape Painter // Vibrant Idea (2/1)
-Landscape Painter // Vibrant Idea dies
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Witherbloom Charm']
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 1, 'G': 2, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages']
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 19)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages']
 
 ==================================================
-Turn 6 - Player 1  (Life: 20 | Hand: 5 | Board: 5)
- Player 1 plays Mountain
-  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 3, 'G': 0, 'C': 0}  Hand: ['Colorstorm Stallion', 'Lorehold Charm', 'Transcendent Archaic', 'Mindful Biomancer', 'Snarl Song']
-Player 1 casts Lorehold Charm {W}{R}
-Player 1 casts Colorstorm Stallion {1}{U}{R}
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold Charm', 'Transcendent Archaic', 'Mindful Biomancer', 'Snarl Song']
+Turn 6 - Player 1  (Life: 19 | Hand: 7 | Board: 3)
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 1, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Ascendant Dustspeaker']
+Player 1 casts Erode {W}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Ascendant Dustspeaker']
+   Player 1 discards Ascendant Dustspeaker
 
 ==================================================
 Turn 6 - Player 2  (Life: 20 | Hand: 6 | Board: 6)
-  [Main 1] Mana: {'W': 0, 'U': 2, 'B': 1, 'R': 2, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Witherbloom Charm', 'Chelonian Tackle']
-Player 2 casts Fractalize {U}
-    Player 2 attacks with: ['Elemental Mascot']
-     Colorstorm Stallion blocks Elemental Mascot
-     Elemental Mascot (1/4) vs Colorstorm Stallion (3/3)
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Witherbloom Charm', 'Chelonian Tackle']
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 1, 'G': 2, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 18)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
 
 ==================================================
-Turn 7 - Player 1  (Life: 20 | Hand: 4 | Board: 7)
+Turn 7 - Player 1  (Life: 18 | Hand: 7 | Board: 3)
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 1, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Foolish Fate']
+Player 1 casts Erode {W}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Foolish Fate']
+   Player 1 discards Foolish Fate
+
+==================================================
+Turn 7 - Player 2  (Life: 20 | Hand: 7 | Board: 6)
+ Player 2 plays Mountain
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 2, 'G': 2, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 17)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+
+==================================================
+Turn 8 - Player 1  (Life: 17 | Hand: 7 | Board: 3)
  Player 1 plays Forest
-  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 3, 'G': 1, 'C': 0}  Hand: ['Lorehold Charm', 'Transcendent Archaic', 'Mindful Biomancer', 'Snarl Song']
-Player 1 casts Lorehold Charm {W}{R}
-Player 1 casts Mindful Biomancer {1}{G}
-    Player 1 attacks with: ['Colorstorm Stallion']
-     Colorstorm Stallion deals 3 damage to Player 2 (life: 17)
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold Charm', 'Transcendent Archaic', 'Snarl Song']
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 1, 'G': 1, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza']
+Player 1 casts Erode {W}
+Player 1 casts Steal the Show {2}{R}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza']
 
 ==================================================
-Turn 7 - Player 2  (Life: 17 | Hand: 7 | Board: 6)
-  [Main 1] Mana: {'W': 0, 'U': 2, 'B': 1, 'R': 2, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Witherbloom Charm', 'Chelonian Tackle', 'Magmablood Archaic']
-Player 2 casts Fractalize {U}
-Player 2 casts Magmablood Archaic {0}
-    Player 2 attacks with: ['Elemental Mascot']
-     Mindful Biomancer blocks Elemental Mascot
-     Elemental Mascot (1/4) vs Mindful Biomancer (2/2)
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Witherbloom Charm', 'Chelonian Tackle']
+Turn 8 - Player 2  (Life: 20 | Hand: 7 | Board: 7)
+ Player 2 plays Island
+  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 2, 'G': 2, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 16)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
 
 ==================================================
-Turn 8 - Player 1  (Life: 20 | Hand: 3 | Board: 9)
-  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 3, 'G': 1, 'C': 0}  Hand: ['Lorehold Charm', 'Transcendent Archaic', 'Snarl Song', 'Tam, Observant Sequencer // Deep Sight']
-Player 1 casts Lorehold Charm {W}{R}
-Player 1 casts Tam, Observant Sequencer // Deep Sight {2}{U}{G}
-    Player 1 attacks with: ['Colorstorm Stallion', 'Mindful Biomancer']
-     Magmablood Archaic blocks Colorstorm Stallion
-     Colorstorm Stallion (3/3) vs Magmablood Archaic (2/2)
-     Mindful Biomancer deals 2 damage to Player 2 (life: 15)
-Magmablood Archaic dies
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold Charm', 'Transcendent Archaic', 'Snarl Song']
+Turn 9 - Player 1  (Life: 16 | Hand: 7 | Board: 4)
+  [Main 1] Mana: {'W': 1, 'U': 0, 'B': 1, 'R': 1, 'G': 1, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Nita, Forum Conciliator']
+Player 1 casts Erode {W}
+Player 1 casts Steal the Show {2}{R}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Nita, Forum Conciliator']
+   Player 1 discards Nita, Forum Conciliator
 
 ==================================================
-Turn 8 - Player 2  (Life: 15 | Hand: 7 | Board: 6)
-  [Main 1] Mana: {'W': 0, 'U': 2, 'B': 1, 'R': 2, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Witherbloom Charm', 'Chelonian Tackle', 'Graduation Day']
-Player 2 casts Fractalize {U}
-    Player 2 attacks with: ['Elemental Mascot']
-     Tam, Observant Sequencer // Deep Sight blocks Elemental Mascot
-     Elemental Mascot (1/4) vs Tam, Observant Sequencer // Deep Sight (4/3)
-Elemental Mascot dies
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Witherbloom Charm', 'Chelonian Tackle', 'Graduation Day']
-   Player 2 discards Graduation Day
+Turn 9 - Player 2  (Life: 20 | Hand: 7 | Board: 8)
+  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 2, 'G': 2, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Masterful Flourish']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Masterful Flourish {B}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 15)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Masterful Flourish']
+   Player 2 discards Masterful Flourish
 
 ==================================================
-Turn 9 - Player 1  (Life: 20 | Hand: 3 | Board: 10)
-  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 3, 'G': 1, 'C': 0}  Hand: ['Lorehold Charm', 'Transcendent Archaic', 'Snarl Song', 'Blech, Loafing Pest']
-Player 1 casts Lorehold Charm {W}{R}
-Player 1 casts Blech, Loafing Pest {1}{B}{G}
-    Player 1 attacks with: ['Colorstorm Stallion', 'Mindful Biomancer', 'Tam, Observant Sequencer // Deep Sight']
-     Colorstorm Stallion deals 3 damage to Player 2 (life: 12)
-     Mindful Biomancer deals 2 damage to Player 2 (life: 10)
-     Tam, Observant Sequencer // Deep Sight deals 4 damage to Player 2 (life: 6)
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold Charm', 'Transcendent Archaic', 'Snarl Song']
+Turn 10 - Player 1  (Life: 15 | Hand: 7 | Board: 4)
+ Player 1 plays Plains
+  [Main 1] Mana: {'W': 2, 'U': 0, 'B': 1, 'R': 1, 'G': 1, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza']
+Player 1 casts Erode {W}
+Player 1 casts Steal the Show {2}{R}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza']
 
 ==================================================
-Turn 9 - Player 2  (Life: 6 | Hand: 7 | Board: 5)
-  [Main 1] Mana: {'W': 0, 'U': 2, 'B': 1, 'R': 2, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Witherbloom Charm', 'Chelonian Tackle', 'Group Project']
-Player 2 casts Fractalize {U}
-  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Fractalize', 'Topiary Lecturer', 'Zaffai and the Tempests', 'Old-Growth Educator', 'Forum Necroscribe', 'Witherbloom Charm', 'Chelonian Tackle', 'Group Project']
-   Player 2 discards Group Project
+Turn 10 - Player 2  (Life: 20 | Hand: 7 | Board: 8)
+  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 2, 'G': 2, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Hungry Graffalon']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 14)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Hungry Graffalon']
+   Player 2 discards Hungry Graffalon
 
 ==================================================
-Turn 10 - Player 1  (Life: 20 | Hand: 3 | Board: 11)
-  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 3, 'G': 1, 'C': 0}  Hand: ['Lorehold Charm', 'Transcendent Archaic', 'Snarl Song', 'Exhibition Tidecaller']
-Player 1 casts Exhibition Tidecaller {U}
-Player 1 casts Lorehold Charm {W}{R}
-    Player 1 attacks with: ['Colorstorm Stallion', 'Mindful Biomancer', 'Tam, Observant Sequencer // Deep Sight', 'Blech, Loafing Pest']
-     Colorstorm Stallion deals 3 damage to Player 2 (life: 3)
-     Mindful Biomancer deals 2 damage to Player 2 (life: 1)
-     Tam, Observant Sequencer // Deep Sight deals 4 damage to Player 2 (life: -3)
-     Blech, Loafing Pest deals 3 damage to Player 2 (life: -6)
+Turn 11 - Player 1  (Life: 14 | Hand: 7 | Board: 5)
+  [Main 1] Mana: {'W': 2, 'U': 0, 'B': 1, 'R': 1, 'G': 1, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Arcane Omens']
+Player 1 casts Erode {W}
+Player 1 casts Steal the Show {2}{R}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Arcane Omens']
+   Player 1 discards Arcane Omens
 
-Player 1 wins! (Player 2 reached -6 life)
+==================================================
+Turn 11 - Player 2  (Life: 20 | Hand: 7 | Board: 8)
+  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 2, 'G': 2, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Run Behind']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 13)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Run Behind']
+   Player 2 discards Run Behind
 
-Result: Player 1 wins!
+==================================================
+Turn 12 - Player 1  (Life: 13 | Hand: 7 | Board: 5)
+ Player 1 plays Swamp
+  [Main 1] Mana: {'W': 2, 'U': 0, 'B': 2, 'R': 1, 'G': 1, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza']
+Player 1 casts Erode {W}
+Player 1 casts Steal the Show {2}{R}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza']
+
+==================================================
+Turn 12 - Player 2  (Life: 20 | Hand: 7 | Board: 8)
+ Player 2 plays Forest
+  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 2, 'G': 3, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 12)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+
+==================================================
+Turn 13 - Player 1  (Life: 12 | Hand: 7 | Board: 6)
+  [Main 1] Mana: {'W': 2, 'U': 0, 'B': 2, 'R': 1, 'G': 1, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Living History']
+Player 1 casts Erode {W}
+Player 1 casts Living History {1}{R}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Living History']
+   Player 1 discards Living History
+
+==================================================
+Turn 13 - Player 2  (Life: 20 | Hand: 7 | Board: 9)
+  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 2, 'G': 3, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Mind Roots']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 11)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Mind Roots']
+   Player 2 discards Mind Roots
+
+==================================================
+Turn 14 - Player 1  (Life: 11 | Hand: 7 | Board: 6)
+  [Main 1] Mana: {'W': 2, 'U': 0, 'B': 2, 'R': 1, 'G': 1, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Spiritcall Enthusiast // Scrollboost']
+Player 1 casts Erode {W}
+Player 1 casts Steal the Show {2}{R}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Spiritcall Enthusiast // Scrollboost']
+   Player 1 discards Spiritcall Enthusiast // Scrollboost
+
+==================================================
+Turn 14 - Player 2  (Life: 20 | Hand: 7 | Board: 9)
+  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 2, 'G': 3, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Quandrix, the Proof']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 10)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Quandrix, the Proof']
+   Player 2 discards Quandrix, the Proof
+
+==================================================
+Turn 15 - Player 1  (Life: 10 | Hand: 7 | Board: 6)
+  [Main 1] Mana: {'W': 2, 'U': 0, 'B': 2, 'R': 1, 'G': 1, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Echocasting Symposium']
+Player 1 casts Erode {W}
+Player 1 casts Steal the Show {2}{R}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Echocasting Symposium']
+   Player 1 discards Echocasting Symposium
+
+==================================================
+Turn 15 - Player 2  (Life: 20 | Hand: 7 | Board: 9)
+  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 2, 'G': 3, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Informed Inkwright']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 9)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Informed Inkwright']
+   Player 2 discards Informed Inkwright
+
+==================================================
+Turn 16 - Player 1  (Life: 9 | Hand: 7 | Board: 6)
+  [Main 1] Mana: {'W': 2, 'U': 0, 'B': 2, 'R': 1, 'G': 1, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', "Shopkeeper's Bane"]
+Player 1 casts Erode {W}
+Player 1 casts Steal the Show {2}{R}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', "Shopkeeper's Bane"]
+   Player 1 discards Shopkeeper's Bane
+
+==================================================
+Turn 16 - Player 2  (Life: 20 | Hand: 7 | Board: 9)
+  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 2, 'G': 3, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Grapple with Death']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 8)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Grapple with Death']
+   Player 2 discards Grapple with Death
+
+==================================================
+Turn 17 - Player 1  (Life: 8 | Hand: 7 | Board: 6)
+  [Main 1] Mana: {'W': 2, 'U': 0, 'B': 2, 'R': 1, 'G': 1, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Abigale, Poet Laureate // Heroic Stanza']
+Player 1 casts Erode {W}
+Player 1 casts Steal the Show {2}{R}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Abigale, Poet Laureate // Heroic Stanza']
+   Player 1 discards Abigale, Poet Laureate // Heroic Stanza
+
+==================================================
+Turn 17 - Player 2  (Life: 20 | Hand: 7 | Board: 9)
+ Player 2 plays Mountain
+  [Main 1] Mana: {'W': 1, 'U': 1, 'B': 1, 'R': 3, 'G': 3, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 7)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+
+==================================================
+Turn 18 - Player 1  (Life: 7 | Hand: 7 | Board: 6)
+  [Main 1] Mana: {'W': 2, 'U': 0, 'B': 2, 'R': 1, 'G': 1, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Lluwen, Exchange Student // Pest Friend']
+Player 1 casts Erode {W}
+Player 1 casts Steal the Show {2}{R}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza', 'Lluwen, Exchange Student // Pest Friend']
+   Player 1 discards Lluwen, Exchange Student // Pest Friend
+
+==================================================
+Turn 18 - Player 2  (Life: 20 | Hand: 7 | Board: 10)
+ Player 2 plays Plains
+  [Main 1] Mana: {'W': 2, 'U': 1, 'B': 1, 'R': 3, 'G': 3, 'C': 0}  Hand: ['Lorehold, the Historian', 'Biblioplex Tomekeeper', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+Player 2 casts Biblioplex Tomekeeper {4}
+    Player 2 attacks with: ['Lecturing Scornmage']
+     Lecturing Scornmage deals 1 damage to Player 1 (life: 6)
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+
+==================================================
+Turn 19 - Player 1  (Life: 6 | Hand: 7 | Board: 6)
+ Player 1 plays Island
+  [Main 1] Mana: {'W': 2, 'U': 1, 'B': 2, 'R': 1, 'G': 1, 'C': 0}  Hand: ['Tester of the Tangential', 'Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza']
+Player 1 casts Erode {W}
+Player 1 casts Tester of the Tangential {1}{U}
+Player 1 casts Steal the Show {2}{R}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza']
+
+==================================================
+Turn 19 - Player 2  (Life: 20 | Hand: 6 | Board: 12)
+  [Main 1] Mana: {'W': 2, 'U': 1, 'B': 1, 'R': 3, 'G': 3, 'C': 0}  Hand: ['Lorehold, the Historian', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Rubble Rouser']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+Player 2 casts Rubble Rouser {2}{R}
+    Player 2 attacks with: ['Lecturing Scornmage', 'Biblioplex Tomekeeper']
+     Tester of the Tangential blocks Lecturing Scornmage
+     Lecturing Scornmage (1/1) vs Tester of the Tangential (1/1)
+     Biblioplex Tomekeeper deals 3 damage to Player 1 (life: 3)
+Lecturing Scornmage dies
+Tester of the Tangential dies
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+
+==================================================
+Turn 20 - Player 1  (Life: 3 | Hand: 6 | Board: 7)
+ Player 1 plays Mountain
+  [Main 1] Mana: {'W': 2, 'U': 1, 'B': 2, 'R': 2, 'G': 1, 'C': 0}  Hand: ['Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Abigale, Poet Laureate // Heroic Stanza']
+Player 1 casts Erode {W}
+Player 1 casts Choreographed Sparks {R}{R}
+Player 1 casts Abigale, Poet Laureate // Heroic Stanza {1}{W}{B}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind']
+
+==================================================
+Turn 20 - Player 2  (Life: 20 | Hand: 6 | Board: 12)
+ Player 2 plays Forest
+  [Main 1] Mana: {'W': 2, 'U': 1, 'B': 1, 'R': 3, 'G': 4, 'C': 0}  Hand: ['Lorehold, the Historian', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Biblioplex Tomekeeper', 'Rubble Rouser']
+     Abigale, Poet Laureate // Heroic Stanza blocks Biblioplex Tomekeeper
+     Biblioplex Tomekeeper (3/4) vs Abigale, Poet Laureate // Heroic Stanza (2/3)
+     Rubble Rouser deals 1 damage to Player 1 (life: 2)
+Abigale, Poet Laureate // Heroic Stanza dies
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+
+==================================================
+Turn 21 - Player 1  (Life: 2 | Hand: 5 | Board: 8)
+  [Main 1] Mana: {'W': 2, 'U': 1, 'B': 2, 'R': 2, 'G': 1, 'C': 0}  Hand: ['Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Melancholic Poet']
+Player 1 casts Erode {W}
+Player 1 casts Choreographed Sparks {R}{R}
+Player 1 casts Melancholic Poet {1}{B}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind']
+
+==================================================
+Turn 21 - Player 2  (Life: 20 | Hand: 6 | Board: 13)
+  [Main 1] Mana: {'W': 2, 'U': 1, 'B': 1, 'R': 3, 'G': 4, 'C': 0}  Hand: ['Lorehold, the Historian', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Hungry Graffalon']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+Player 2 casts Hungry Graffalon {3}{G}
+    Player 2 attacks with: ['Biblioplex Tomekeeper', 'Rubble Rouser']
+     Melancholic Poet blocks Biblioplex Tomekeeper
+     Biblioplex Tomekeeper (3/4) vs Melancholic Poet (2/2)
+     Rubble Rouser deals 1 damage to Player 1 (life: 1)
+Melancholic Poet dies
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Lorehold, the Historian', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller']
+
+==================================================
+Turn 22 - Player 1  (Life: 1 | Hand: 5 | Board: 8)
+  [Main 1] Mana: {'W': 2, 'U': 1, 'B': 2, 'R': 2, 'G': 1, 'C': 0}  Hand: ['Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Primary Research']
+Player 1 casts Erode {W}
+Player 1 casts Choreographed Sparks {R}{R}
+Player 1 casts Run Behind {3}{U}
+  [Main 2] Mana: {'W': 0, 'U': 0, 'B': 0, 'R': 0, 'G': 0, 'C': 0}  Hand: ['Erode', 'Steal the Show', 'Rancorous Archaic', 'Choreographed Sparks', 'Run Behind', 'Primary Research']
+
+==================================================
+Turn 22 - Player 2  (Life: 20 | Hand: 6 | Board: 14)
+  [Main 1] Mana: {'W': 2, 'U': 1, 'B': 1, 'R': 3, 'G': 4, 'C': 0}  Hand: ['Lorehold, the Historian', 'Follow the Lumarets', 'Chase Inspiration', 'Tablet of Discovery', 'Wisdom of Ages', 'Exhibition Tidecaller', 'Wild Hypothesis']
+Player 2 casts Chase Inspiration {U}
+Player 2 casts Wild Hypothesis {G}
+Player 2 casts Follow the Lumarets {1}{G}
+Player 2 casts Tablet of Discovery {2}{R}
+    Player 2 attacks with: ['Biblioplex Tomekeeper', 'Rubble Rouser', 'Hungry Graffalon']
+     Biblioplex Tomekeeper deals 3 damage to Player 1 (life: -2)
+     Rubble Rouser deals 1 damage to Player 1 (life: -3)
+     Hungry Graffalon deals 3 damage to Player 1 (life: -6)
+
+Player 2 wins! (Player 1 reached -6 life)
+
+Result: Player 2 wins!
