@@ -107,7 +107,7 @@ def parse_manaCost(costString):
             mana[token] = mana.get(token, 0) + 1
     return mana
 
-#define a card object
+#define card object
 
 @dataclass
 class Card:
@@ -176,7 +176,6 @@ class Card:
     
 def row_to_card(row: pd.Series) -> Card:
     def safe_list(val):
-        # convert lists to tuples so Card becomes hashable
         if isinstance(val, list):
             return tuple(val)
         return tuple()
@@ -286,8 +285,6 @@ class GameLoop:
         p2 = PlayerState(name="Player 2", library=d2)
 
         self.state = GameState(players=[p1, p2])
-
-        # draw opening hands
         for p in self.state.players:
             self._draw_n(p, 7)
     
@@ -377,7 +374,7 @@ class GameLoop:
         op = self.state.opponent
         for card in ap.battlefield:
             card.tapped = False
-            card.summoning_sick = False  # clears after surviving a full turn
+            card.summoning_sick = False 
         for card in op.battlefield: #clear summoning sickness for opponents cards so they can block(technically not right but easiest)
             card.summoning_sick = False
         ap.lands_played_this_turn = 0
@@ -386,7 +383,7 @@ class GameLoop:
 
     def _draw_phase(self):
         ap = self.state.active_player
-        # First player skips draw on turn 1
+        # first player skips draw on turn 1
         if self.state.turn == 1 and self.state.active_player_idx == 0:
             return
         self._draw(ap)
@@ -396,7 +393,7 @@ class GameLoop:
         ap = self.state.active_player
         
 
-        # play one land if we have one and haven't played one this turn
+        # play land if possible
         if ap.lands_played_this_turn == 0:
             lands_in_hand = [c for c in ap.hand if c.is_land]
             if lands_in_hand:
@@ -410,7 +407,7 @@ class GameLoop:
 
         self.log(f"  [{phase_name}] Mana: {ap.mana_pool}  Hand: {[c.name for c in ap.hand]}")
 
-        # Cast spells greedily (lowest CMC first)
+        # Cast spells greedily, cheapest first
         castable = sorted(
             [c for c in ap.hand if c.is_spell and self._can_afford(ap, c)],
             key=lambda c: c.cmc
@@ -422,7 +419,7 @@ class GameLoop:
                 if card.is_creature:
                     self._put_on_battlefield(ap, card)
                 else:
-                    # Non-creature spells: basic damage/removal heuristic
+                    # Non-creature spells: simple removal plan
                     self._resolve_noncreature(ap, card)
 
         self._empty_mana_pool(ap)
@@ -436,12 +433,12 @@ class GameLoop:
         text = card.oracle_text.lower()
         opponent = self.state.opponent
 
-        # Crude damage detection: look for "deals X damage"
+        # look for "deals X damage" on a card
         import re
         dmg_match = re.search(r'deals?\s+(\d+)\s+damage', text)
         if dmg_match and opponent:
             dmg = int(dmg_match.group(1))
-            # Try to target a creature, else go face
+            # check for targeting creature or face
             enemy_creatures = opponent.creatures()
             if enemy_creatures and 'target creature' in text:
                 target = random.choice(enemy_creatures)
@@ -454,7 +451,6 @@ class GameLoop:
 
         player.graveyard.append(card)
     
-    #currently broken
     def _combat_phase(self):
         ap = self.state.active_player
         opp = self.state.opponent
@@ -465,11 +461,10 @@ class GameLoop:
 
         self.log(f"    {ap.name} attacks with: {[c.name for c in attackers]}")
 
-        # Tap attackers
         for c in attackers:
             c.tapped = True
 
-        # Opponent blocks: each untapped creature blocks one attacker (greedy)
+        # each untapped creature blocks one attacker (greedy)
         blockers = opp.untapped_creatures()
         blocks: dict[Card, Optional[Card]] = {a: None for a in attackers}
 
@@ -481,14 +476,12 @@ class GameLoop:
                 blocker.tapped = True
                 self.log(f"     {blocker.name} blocks {attacker.name}")
 
-        # Resolve combat damage
+        # combat damage
         for attacker, blocker in blocks.items():
             if blocker is None:
-                # Unblocked: deal damage to opponent
                 opp.life -= attacker.power
                 self.log(f"     {attacker.name} deals {attacker.power} damage to {opp.name} (life: {opp.life})")
             else:
-                # Blocked: creatures deal damage to each other
                 attacker.damage += blocker.power
                 blocker.damage += attacker.power
                 self.log(f"     {attacker.name} ({attacker.power}/{attacker.toughness}) vs "
