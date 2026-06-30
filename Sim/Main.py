@@ -1,3 +1,4 @@
+from itertools import combinations
 import json
 import pandas as pd
 from Cards import deck_to_cards
@@ -83,26 +84,51 @@ def construct_deck(cards):
 
 
 
+def play_games(n, cards, max_turns):
+    decks = []
+    winners = {}
+    for i in range(n):
+        deck_df = construct_deck(cards)
+        deck = deck_to_cards(deck_df)
+        decks.append(deck)
+    for i in list(combinations(range(n), 2)):
+        deck1 = decks[i[0]]
+        deck2 = decks[i[1]]
+        gameLoop = GameLoop(deck1, deck2, verbose=True)
+        winner = gameLoop.run(max_turns=max_turns)
+        
+        winnerIndex = i[winner]
+
+        key = "deck " + str(winnerIndex)
+        winners[key] = winners.get(key, 0) + 1
+    return winners
+
+
 
 
 if __name__ == "__main__":
-    sos_cards = load_data(r"E:\Python\mtg\SOS.json")
-
     print("Loading cards...")
-    deck1_df = construct_deck(sos_cards)
-    deck2_df = construct_deck(sos_cards)
+    sos_cards = load_data(r"E:\Python\mtg\SOS.json")
+    winners = play_games(10, sos_cards, 25)
+    print(winners)
 
-    deck1 = deck_to_cards(deck1_df)
-    deck2 = deck_to_cards(deck2_df)
+    
+    # deck1_df = construct_deck(sos_cards)
+    # deck2_df = construct_deck(sos_cards)
 
-    # print(f"Deck 1: {len(deck1)} cards")
-    # print(f"Deck 2: {len(deck2)} cards")
+    # deck1 = deck_to_cards(deck1_df)
+    # deck2 = deck_to_cards(deck2_df)
 
-    print("\n--- Starting Game ---\n")
-    gameLoop = GameLoop(deck1, deck2, verbose=True)
-    winner = gameLoop.run(max_turns=25)
 
-    if winner is not None:
-        print(f"\nResult: Player {winner + 1} wins!")
-    else:
-        print("\nResult: Draw / Timeout")
+
+
+    # print("\n--- Starting Game ---\n")
+    # gameLoop = GameLoop(deck1, deck2, verbose=True)
+    # winner = gameLoop.run(max_turns=25)
+
+    # if winner is not None:
+    #     print(f"\nResult: Player {winner + 1} wins!")
+    # else:
+    #     print("\nResult: Draw / Timeout")
+
+
