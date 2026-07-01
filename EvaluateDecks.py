@@ -97,7 +97,7 @@ def breed_decks(parent1, parent2):
         
         if available.empty:
             # merged is exhausted, draw from sos_cards instead
-            candidate = SOS_CARDS[~SOS_CARDS['name'].isin(BASIC_NAMES)].sample()
+            candidate = Constants.SOS_CARDS[~Constants.SOS_CARDS['name'].isin(BASIC_NAMES)].sample()
         else:
             candidate = available.sample(1)
         
