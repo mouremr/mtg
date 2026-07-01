@@ -253,7 +253,7 @@ class GameLoop:
         if self.state.active_player_idx == 0:
             self.state.turn += 1
 
-# ── main game loop ──
+# main game loop
 
     def run(self, max_turns: int = 50) -> Optional[int]:
         """
