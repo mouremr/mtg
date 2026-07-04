@@ -17,7 +17,7 @@ def construct_deck(cards):
     return deck
             
 def construct_manabase(deck):
-        # get weighted color counts
+    # get weighted color counts
     rows = []
     for colors in deck['colors']:
         if len(colors) > 0:

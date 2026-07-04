@@ -9,9 +9,11 @@ from DeckBuilding import construct_manabase
 
 from Constants import BASIC_NAMES
 
+from Cards import deck_to_cards
+
 
 def evaluate_decks(deck_dfs, winners, percent_to_keep, percent_to_mutate, percent_to_crossover):
-    #deck_dfs = 
+    #returns a dataframe of the mutated and changed deck for the next pass of games
     
     amount_to_keep = (int)(len(deck_dfs) * percent_to_keep)
     winners = dict(sorted(winners.items(), key=lambda item: item[1], reverse=True))
@@ -27,16 +29,29 @@ def evaluate_decks(deck_dfs, winners, percent_to_keep, percent_to_mutate, percen
     kept_indices = [int(key.split(" ")[1]) for key in kept_winners.keys()]
     kept_deck_dfs = {key: deck_dfs[idx] for key, idx in zip(kept_winners.keys(), kept_indices)}
     
-    return pd.concat(
-        list(kept_deck_dfs.values()) + list(mutated.values()) + list(crossover.values()),
-        ignore_index=True
-    )
+    # return pd.concat(
+    #     list(kept_deck_dfs.values()) + list(mutated.values()) + list(crossover.values()),
+    #     ignore_index=True
+    # )
+
+    #convert all the new decks to a list of card objs
+    decks = []
+    for deck in mutated.values():
+        decks.append(deck_to_cards(deck))
+    for deck in crossover.values():
+        decks.append(deck_to_cards(deck))
+    for deck in kept_deck_dfs.values():
+        decks.append(deck_to_cards(deck))
+    return decks
+
+
+
 
 
 def mutate_decks(deck_dfs, num_decks, num_swaps=2):
     mutated_decks = {}
     
-    #this might just be taking random decks and mutating, not sure if thats the plan
+    #this might just be taking random decks and mutating, might make more sense just to mutate winners
     decks_to_mutate = deck_dfs[:num_decks]
 
     for i, df in enumerate(decks_to_mutate):

@@ -58,9 +58,13 @@ if __name__ == "__main__":
         deck_dfs.append(deck_df)
 
     print(decks)
-    winners = play_games(10, decks, 25)
-    print(winners)
+    for i in range(10):
+        winners = play_games(10, decks, 25)
+        print(winners)
+        evaluate_decks(deck_dfs, winners, .3, .4, .3)
 
-    print(evaluate_decks(deck_dfs, winners, .3, .4, .3))
+    
+
+    
 
 

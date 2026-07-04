@@ -113,4 +113,7 @@ def row_to_card(row: pd.Series) -> Card:
     )
 
 def deck_to_cards(deck_df: pd.DataFrame) -> list[Card]:
+    """
+    Converts a deck dataframe into a list of card objects
+    """
     return [row_to_card(row) for _, row in deck_df.iterrows()]
