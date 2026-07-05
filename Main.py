@@ -59,9 +59,10 @@ if __name__ == "__main__":
 
     print(decks)
     for i in range(10):
-        winners = play_games(10, decks, 25)
+        winners = play_games(len(decks), decks, 25)  # use actual deck count
         print(winners)
-        evaluate_decks(deck_dfs, winners, .3, .4, .3)
+        decks, deck_dfs = evaluate_decks(deck_dfs, winners, .3, .4, .3)
+        
 
     
 

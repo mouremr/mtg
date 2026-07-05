@@ -13,14 +13,14 @@ from Cards import deck_to_cards
 
 
 def evaluate_decks(deck_dfs, winners, percent_to_keep, percent_to_mutate, percent_to_crossover):
-    #returns a dataframe of the mutated and changed deck for the next pass of games
+    #returns a list of the mutated and changed deck as card objects in order to be used for the next pass of games
     
     amount_to_keep = (int)(len(deck_dfs) * percent_to_keep)
     winners = dict(sorted(winners.items(), key=lambda item: item[1], reverse=True))
     kept_winners = dict(islice(winners.items(), amount_to_keep))
 
     amount_to_mutate = (int)(len(deck_dfs) * percent_to_mutate)
-    mutated = mutate_decks(deck_dfs, amount_to_mutate)
+    mutated = mutate_decks(deck_dfs, winners, amount_to_mutate)
     
 
     amount_to_crossover = (int)(len(deck_dfs) * percent_to_crossover)
@@ -28,31 +28,29 @@ def evaluate_decks(deck_dfs, winners, percent_to_keep, percent_to_mutate, percen
 
     kept_indices = [int(key.split(" ")[1]) for key in kept_winners.keys()]
     kept_deck_dfs = {key: deck_dfs[idx] for key, idx in zip(kept_winners.keys(), kept_indices)}
-    
-    # return pd.concat(
-    #     list(kept_deck_dfs.values()) + list(mutated.values()) + list(crossover.values()),
-    #     ignore_index=True
-    # )
 
     #convert all the new decks to a list of card objs
-    decks = []
-    for deck in mutated.values():
-        decks.append(deck_to_cards(deck))
-    for deck in crossover.values():
-        decks.append(deck_to_cards(deck))
-    for deck in kept_deck_dfs.values():
-        decks.append(deck_to_cards(deck))
-    return decks
+    # decks = []
+    # for deck in mutated.values():
+    #     decks.append(deck_to_cards(deck))
+    # for deck in crossover.values():
+    #     decks.append(deck_to_cards(deck))
+    # for deck in kept_deck_dfs.values():
+    #     decks.append(deck_to_cards(deck))
+    new_deck_dfs = list(kept_deck_dfs.values()) + list(mutated.values()) + list(crossover.values())
+    decks = [deck_to_cards(df) for df in new_deck_dfs]
+    return decks, new_deck_dfs
 
 
 
 
 
-def mutate_decks(deck_dfs, num_decks, num_swaps=2):
+def mutate_decks(deck_dfs, winners, num_decks, num_swaps=2):
     mutated_decks = {}
     
     #this might just be taking random decks and mutating, might make more sense just to mutate winners
-    decks_to_mutate = deck_dfs[:num_decks]
+    top_indices = [int(key.split(" ")[1]) for key, _ in list(winners.items())[:num_decks]]
+    decks_to_mutate = [deck_dfs[i] for i in top_indices]
 
     for i, df in enumerate(decks_to_mutate):
         df = df.copy()  # avoid mutating the original deck in place
@@ -84,17 +82,18 @@ def crossover_decks(deck_dfs, winners, amount_to_crossover, tournament_size):
 
     for i in range(amount_to_crossover):
         parents = []
+        attempts = 0
 
         for _ in range(2):
             tournament_indices = random.sample(range(len(deck_dfs)), tournament_size)
-            
             best_idx = max(tournament_indices, key=lambda idx: winners.get(f"deck {idx}", 0))
             parents.append(deck_dfs[best_idx])
 
+        # fall back to a mutation of the single parent instead
         if parents[0].equals(parents[1]):
-            continue
-
-        crossover_decks[f"deck {i}"] = breed_decks(parents[0], parents[1])
+            crossover_decks[f"deck {i}"] = mutate_decks(deck_dfs, winners, 1)[f"deck 0"]
+        else:
+            crossover_decks[f"deck {i}"] = breed_decks(parents[0], parents[1])
 
     return crossover_decks
 
