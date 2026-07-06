@@ -30,13 +30,6 @@ def evaluate_decks(deck_dfs, winners, percent_to_keep, percent_to_mutate, percen
     kept_deck_dfs = {key: deck_dfs[idx] for key, idx in zip(kept_winners.keys(), kept_indices)}
 
     #convert all the new decks to a list of card objs
-    # decks = []
-    # for deck in mutated.values():
-    #     decks.append(deck_to_cards(deck))
-    # for deck in crossover.values():
-    #     decks.append(deck_to_cards(deck))
-    # for deck in kept_deck_dfs.values():
-    #     decks.append(deck_to_cards(deck))
     new_deck_dfs = list(kept_deck_dfs.values()) + list(mutated.values()) + list(crossover.values())
     decks = [deck_to_cards(df) for df in new_deck_dfs]
     return decks, new_deck_dfs
@@ -48,9 +41,18 @@ def evaluate_decks(deck_dfs, winners, percent_to_keep, percent_to_mutate, percen
 def mutate_decks(deck_dfs, winners, num_decks, num_swaps=2):
     mutated_decks = {}
     
-    #this might just be taking random decks and mutating, might make more sense just to mutate winners
+    
     top_indices = [int(key.split(" ")[1]) for key, _ in list(winners.items())[:num_decks]]
+    #fall back to full decklist if not enough winners
+    if len(top_indices) < num_decks:
+        all_indices = set(range(len(deck_dfs)))
+        remaining = list(all_indices - set(top_indices))
+        random.shuffle(remaining)
+        top_indices += remaining[:num_decks - len(top_indices)]
+    
     decks_to_mutate = [deck_dfs[i] for i in top_indices]
+
+    
 
     for i, df in enumerate(decks_to_mutate):
         df = df.copy()  # avoid mutating the original deck in place

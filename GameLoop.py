@@ -262,7 +262,7 @@ class GameLoop:
         """
         while not self.state.gameover:
             if self.state.turn > max_turns:
-                self.log(f"\n⏱  Turn limit reached — draw!")
+                self.log(f"\nTurn limit reached — draw!")
                 return None
 
             self._untap_phase()
