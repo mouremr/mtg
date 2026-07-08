@@ -65,8 +65,8 @@ if __name__ == "__main__":
     Constants.SOS_CARDS = load_data(r"E:\Python\mtg\SOS.json")
     decks = []
     deck_dfs = []
-    num_decks = 40
-    num_generations = 50
+    num_decks = 30
+    num_generations = 25
 
     for i in range(num_decks):
         deck_df = construct_deck(Constants.SOS_CARDS)
@@ -75,7 +75,7 @@ if __name__ == "__main__":
         deck_dfs.append(deck_df)
 
     for i in range(num_generations):
-        winners = play_games(len(decks), decks, 25, 3)  # use actual deck count
+        winners = play_games(len(decks), decks, 25, 5)  # use actual deck count
         sorted_winners = sorted(winners.items(), key=lambda item: item[1], reverse=True)
         print("Generation " + str(i + 1) + " Winrates:\n" + str(sorted_winners))
 
@@ -101,7 +101,7 @@ if __name__ == "__main__":
 
         
 
-        decks, deck_dfs = evaluate_decks(deck_dfs, winners, .5, .25, .25)
+        decks, deck_dfs = evaluate_decks(deck_dfs, winners, .5, .25)
         
 
 

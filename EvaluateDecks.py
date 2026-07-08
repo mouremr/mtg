@@ -12,19 +12,22 @@ from Constants import BASIC_NAMES
 from Cards import deck_to_cards
 
 
-def evaluate_decks(deck_dfs, winners, percent_keep, percent_mutate, percent_crossover):
+def evaluate_decks(deck_dfs, winners, percent_keep, percent_mutate):
     #returns a list of the mutated and changed deck as card objects in order to be used for the next pass of games
     total = len(deck_dfs)
     winners = dict(sorted(winners.items(), key=lambda item: item[1], reverse=True))
     
-    amount_to_keep = int(total * percent_keep)
+    elitism_count = min(2, len(winners))
+    elite_keys = list(winners.keys())[:elitism_count]
+
+    amount_to_keep = int(total * percent_keep) - elitism_count
     amount_to_mutate = int(total * percent_mutate)
 
     if amount_to_keep > len(winners):
         shortfall = amount_to_keep - len(winners)
         amount_to_keep = len(winners)
         amount_to_mutate += shortfall
-    amount_to_crossover = total - amount_to_keep - amount_to_mutate
+    amount_to_crossover = total - amount_to_keep - amount_to_mutate - elitism_count
 
     kept_winners = dict(islice(winners.items(), amount_to_keep))
     mutated = mutate_decks(deck_dfs, winners, amount_to_mutate)
@@ -33,8 +36,11 @@ def evaluate_decks(deck_dfs, winners, percent_keep, percent_mutate, percent_cros
     kept_indices = [int(key.split(" ")[1]) for key in kept_winners.keys()]
     kept_deck_dfs = {key: deck_dfs[idx] for key, idx in zip(kept_winners.keys(), kept_indices)}
 
+
+    elite_indices = [int(key.split(" ")[1]) for key in elite_keys]
+    elite_decks = {key: deck_dfs[idx] for key, idx in zip(elite_keys, elite_indices)}
     #convert all the new decks to a list of card objs
-    new_deck_dfs = list(kept_deck_dfs.values()) + list(mutated.values()) + list(crossover.values())
+    new_deck_dfs = list(elite_decks.values()) + list(kept_deck_dfs.values()) + list(mutated.values()) + list(crossover.values())
     
     assert len(new_deck_dfs) == total, (
         f"Population size drifted: expected {total}, got {len(new_deck_dfs)} "
@@ -66,36 +72,40 @@ def mutate_decks(deck_dfs, winners, num_decks, num_swaps=2):
     
 
     for i, df in enumerate(decks_to_mutate):
-        df = df.copy()  # avoid mutating the original deck in place
+        df = df.copy()
         
         for _ in range(num_swaps):
             nonbasics = df[~df['name'].isin(BASIC_NAMES)]
             if nonbasics.empty:
                 break
             
-            # remove one random nonbasic card
-            #maybe this should take basics too
+            # Remove a random nonbasic
             drop_idx = nonbasics.sample(1).index
+            dropped_card = df.loc[drop_idx]
             df = df.drop(drop_idx)
             
-            # add a random replacement, respecting 4-copy limit
-            #todo: add random card already in colors
+            # Find cards with similar color identity or CMC
+            colors = df['colorIdentity'].explode().unique().tolist()
+            
+            
+            target_cmc = dropped_card['faceManaValue'].values[0] if 'faceManaValue' in dropped_card else 3
+            candidates = Constants.SOS_CARDS[
+                ~Constants.SOS_CARDS['name'].isin(BASIC_NAMES) &
+                Constants.SOS_CARDS['colorIdentity'].apply(
+                    lambda card_colors: all(c in colors for c in card_colors)
+                )
+            ]
+            
+
+            candidates['cmc_diff'] = abs(candidates['faceManaValue'] - target_cmc)
+            candidates = candidates.sort_values('cmc_diff').head(20)  # find 20 closest similar cards
+            
+            if candidates.empty:
+                candidates = Constants.SOS_CARDS[~Constants.SOS_CARDS['name'].isin(BASIC_NAMES)]
+            
+            # add random candidate to replace card, respecting the 4 copy restriction
             while True:
-                colors = df['colorIdentity'].explode().unique().tolist()
-
-                #exclude basices and only include cards of the same color
-                candidates = Constants.SOS_CARDS[
-                    ~Constants.SOS_CARDS['name'].isin(BASIC_NAMES) & 
-                    Constants.SOS_CARDS['colorIdentity'].apply(lambda card_colors: all(c in colors for c in card_colors))
-                ]
-                if candidates.empty:
-                    #if no cards match, just pick from all non-basics
-                    print("falling back t random card!")
-                    candidates = Constants.SOS_CARDS[~Constants.SOS_CARDS['name'].isin(BASIC_NAMES)]
                 candidate = candidates.sample(1)
-                #candidate = Constants.SOS_CARDS[~Constants.SOS_CARDS['name'].isin(BASIC_NAMES)].sample()
-
-
                 name = candidate['name'].values[0]
                 if (df['name'] == name).sum() < 4:
                     df = pd.concat([df, candidate], ignore_index=True)
@@ -126,29 +136,39 @@ def crossover_decks(deck_dfs, winners, amount_to_crossover, tournament_size):
 
     return crossover_decks
 
-def breed_decks(parent1, parent2):
-    nonbasics1 = parent1[~parent1['name'].isin(BASIC_NAMES)]
-    nonbasics2 = parent2[~parent2['name'].isin(BASIC_NAMES)]
-
-    merged = pd.concat([nonbasics1, nonbasics2], ignore_index=True)
-
-    new_deck = pd.DataFrame(columns=merged.columns)
-
-    #todo: adjust the num of nonlands to be flexible later
-    while len(new_deck) < 36:
-        available = merged[merged['name'].apply(lambda name: (new_deck['name'] == name).sum() < 4)]
+def breed_decks(parent1, parent2, num_cards=36):
+    #identify and keep cards shared between parent decks
+    common_cards = pd.merge(
+        parent1[~parent1['name'].isin(BASIC_NAMES)],
+        parent2[~parent2['name'].isin(BASIC_NAMES)],
+        on='name'
+    )['name'].tolist()
+    
+    new_deck = pd.DataFrame(columns=parent1.columns)
+    for card_name in common_cards:
+        card = parent1[parent1['name'] == card_name].iloc[0]
+        new_deck = pd.concat([new_deck, pd.DataFrame([card])], ignore_index=True)
+    
+    
+    remaining = num_cards - len(new_deck)
+    parent1_remaining = parent1[~parent1['name'].isin(common_cards)]
+    parent2_remaining = parent2[~parent2['name'].isin(common_cards)]
+    
+    for _ in range(remaining):
+        # alternate filling slots between parents
+        source = parent1_remaining if _ % 2 == 0 else parent2_remaining
+        if source.empty:
+            source = Constants.SOS_CARDS[~Constants.SOS_CARDS['name'].isin(BASIC_NAMES)]
         
-        if available.empty:
-            # merged is exhausted, draw from sos_cards instead
-            candidate = Constants.SOS_CARDS[~Constants.SOS_CARDS['name'].isin(BASIC_NAMES)].sample()
-        else:
-            candidate = available.sample(1)
-        
+        #pick a card from parent that doesnt exceed 4 copies, otherwise try a random card.
+        candidate = source.sample(1)
         name = candidate['name'].values[0]
         if (new_deck['name'] == name).sum() < 4:
             new_deck = pd.concat([new_deck, candidate], ignore_index=True)
-
-    #Add basic adding logic
+        else:
+            #use mutate_decks() instead here maybe
+            candidate = Constants.SOS_CARDS[~Constants.SOS_CARDS['name'].isin(BASIC_NAMES)].sample(1)
+            new_deck = pd.concat([new_deck, candidate], ignore_index=True)
+    
     new_deck = construct_manabase(new_deck)
     return new_deck
-    
