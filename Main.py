@@ -101,7 +101,7 @@ if __name__ == "__main__":
 
         
 
-        decks, deck_dfs = evaluate_decks(deck_dfs, winners, .3, .4, .3)
+        decks, deck_dfs = evaluate_decks(deck_dfs, winners, .5, .25, .25)
         
 
 

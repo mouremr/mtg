@@ -81,7 +81,21 @@ def mutate_decks(deck_dfs, winners, num_decks, num_swaps=2):
             # add a random replacement, respecting 4-copy limit
             #todo: add random card already in colors
             while True:
-                candidate = Constants.SOS_CARDS[~Constants.SOS_CARDS['name'].isin(BASIC_NAMES)].sample()
+                colors = df['colorIdentity'].explode().unique().tolist()
+
+                #exclude basices and only include cards of the same color
+                candidates = Constants.SOS_CARDS[
+                    ~Constants.SOS_CARDS['name'].isin(BASIC_NAMES) & 
+                    Constants.SOS_CARDS['colorIdentity'].apply(lambda card_colors: all(c in colors for c in card_colors))
+                ]
+                if candidates.empty:
+                    #if no cards match, just pick from all non-basics
+                    print("falling back t random card!")
+                    candidates = Constants.SOS_CARDS[~Constants.SOS_CARDS['name'].isin(BASIC_NAMES)]
+                candidate = candidates.sample(1)
+                #candidate = Constants.SOS_CARDS[~Constants.SOS_CARDS['name'].isin(BASIC_NAMES)].sample()
+
+
                 name = candidate['name'].values[0]
                 if (df['name'] == name).sum() < 4:
                     df = pd.concat([df, candidate], ignore_index=True)
