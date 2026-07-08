@@ -12,18 +12,22 @@ from Constants import BASIC_NAMES
 from Cards import deck_to_cards
 
 
-def evaluate_decks(deck_dfs, winners, percent_to_keep, percent_to_mutate, percent_to_crossover):
+def evaluate_decks(deck_dfs, winners, percent_keep, percent_mutate, percent_crossover):
     #returns a list of the mutated and changed deck as card objects in order to be used for the next pass of games
-    
-    amount_to_keep = (int)(len(deck_dfs) * percent_to_keep)
+    total = len(deck_dfs)
     winners = dict(sorted(winners.items(), key=lambda item: item[1], reverse=True))
-    kept_winners = dict(islice(winners.items(), amount_to_keep))
-
-    amount_to_mutate = (int)(len(deck_dfs) * percent_to_mutate)
-    mutated = mutate_decks(deck_dfs, winners, amount_to_mutate)
     
+    amount_to_keep = int(total * percent_keep)
+    amount_to_mutate = int(total * percent_mutate)
 
-    amount_to_crossover = (int)(len(deck_dfs) * percent_to_crossover)
+    if amount_to_keep > len(winners):
+        shortfall = amount_to_keep - len(winners)
+        amount_to_keep = len(winners)
+        amount_to_mutate += shortfall
+    amount_to_crossover = total - amount_to_keep - amount_to_mutate
+
+    kept_winners = dict(islice(winners.items(), amount_to_keep))
+    mutated = mutate_decks(deck_dfs, winners, amount_to_mutate)
     crossover = crossover_decks(deck_dfs, winners, amount_to_crossover, 3)
 
     kept_indices = [int(key.split(" ")[1]) for key in kept_winners.keys()]
@@ -31,6 +35,12 @@ def evaluate_decks(deck_dfs, winners, percent_to_keep, percent_to_mutate, percen
 
     #convert all the new decks to a list of card objs
     new_deck_dfs = list(kept_deck_dfs.values()) + list(mutated.values()) + list(crossover.values())
+    
+    assert len(new_deck_dfs) == total, (
+        f"Population size drifted: expected {total}, got {len(new_deck_dfs)} "
+        f"(keep={len(kept_deck_dfs)}, mutate={len(mutated)}, crossover={len(crossover)})"
+    )
+    
     decks = [deck_to_cards(df) for df in new_deck_dfs]
     return decks, new_deck_dfs
 
@@ -43,6 +53,7 @@ def mutate_decks(deck_dfs, winners, num_decks, num_swaps=2):
     
     
     top_indices = [int(key.split(" ")[1]) for key, _ in list(winners.items())[:num_decks]]
+    
     #fall back to full decklist if not enough winners
     if len(top_indices) < num_decks:
         all_indices = set(range(len(deck_dfs)))
@@ -68,6 +79,7 @@ def mutate_decks(deck_dfs, winners, num_decks, num_swaps=2):
             df = df.drop(drop_idx)
             
             # add a random replacement, respecting 4-copy limit
+            #todo: add random card already in colors
             while True:
                 candidate = Constants.SOS_CARDS[~Constants.SOS_CARDS['name'].isin(BASIC_NAMES)].sample()
                 name = candidate['name'].values[0]
@@ -75,6 +87,8 @@ def mutate_decks(deck_dfs, winners, num_decks, num_swaps=2):
                     df = pd.concat([df, candidate], ignore_index=True)
                     break
         
+        df = df[~df['name'].isin(BASIC_NAMES)].reset_index(drop=True)
+        df = construct_manabase(df)
         mutated_decks[f"deck {i}"] = df
     
     return mutated_decks
@@ -84,7 +98,6 @@ def crossover_decks(deck_dfs, winners, amount_to_crossover, tournament_size):
 
     for i in range(amount_to_crossover):
         parents = []
-        attempts = 0
 
         for _ in range(2):
             tournament_indices = random.sample(range(len(deck_dfs)), tournament_size)
