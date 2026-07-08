@@ -65,8 +65,8 @@ if __name__ == "__main__":
     Constants.SOS_CARDS = load_data(r"E:\Python\mtg\SOS.json")
     decks = []
     deck_dfs = []
-    num_decks = 20
-    num_generations = 2
+    num_decks = 40
+    num_generations = 50
 
     for i in range(num_decks):
         deck_df = construct_deck(Constants.SOS_CARDS)

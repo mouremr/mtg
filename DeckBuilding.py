@@ -1,18 +1,28 @@
 import pandas as pd
 import Constants
+import random
 
 def construct_deck(cards):
     basic_names = ['Forest', 'Swamp', 'Plains', 'Mountain', 'Island']
 
-    #pick random non-basic land cards from the input dataframe
+    color1 = random.choice(['W', 'U', 'B', 'R', 'G'])
+    color2 = random.choice(['W', 'U', 'B', 'R', 'G'])
+    chosen_colors = {color1, color2}
+
+    color_filter = cards['colors'].apply(
+        lambda c: len(c) == 0 or all(color in chosen_colors for color in c)
+    )
+    card_pool = cards[color_filter & ~cards['name'].isin(basic_names)]
+
     deck = pd.DataFrame(columns=cards.columns)
     
     while len(deck) < 38:
-        random_row = cards[~cards['name'].isin(basic_names)].sample()  # exclude basics here
+        random_row = card_pool.sample()
         card_name = random_row['name'].values[0]
         
         if (deck['name'] == card_name).sum() < 4:
             deck = pd.concat([deck, random_row], ignore_index=True)
+
     deck = construct_manabase(deck)
     return deck
             
