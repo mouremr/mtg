@@ -1,6 +1,5 @@
 from itertools import combinations, islice
 import json
-import random
 import pandas as pd
 from Cards import deck_to_cards
 from GameLoop import GameLoop
@@ -10,6 +9,7 @@ import matplotlib.pyplot as plt
 import Constants
 
 from DeckBuilding import *
+from Stats import *
 
 def load_data(filepath):
     with open(filepath, "r", encoding="utf-8") as file:
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     decks = []
     deck_dfs = []
     num_decks = 30
-    num_generations = 25
+    num_generations = 20
 
     for i in range(num_decks):
         deck_df = construct_deck(Constants.SOS_CARDS)
@@ -83,21 +83,10 @@ if __name__ == "__main__":
         
         
         win_rates = {key: wins / total_wins for key, wins in winners.items()}
-        generation_stats.append({
-            "generation": i,
-            "top_win_rate": max(win_rates.values()),
-            "avg_win_rate": sum(win_rates.values()) / len(win_rates),
-            "winner": max(win_rates, key=win_rates.get)
-        })
+        generation_stats = update_generation_stats(generation_stats, win_rates, i)
         
         
-        # generation_record = {"generation": i}
-        # for j in range(len(decks)):
-        #     key = f"deck {j}"
-        #     wins = winners.get(key, 0)
-        #     generation_record[key] = wins / total_wins if total_wins > 0 else 0
-        
-        # generation_stats.append(generation_record)
+
 
         
 
@@ -105,38 +94,11 @@ if __name__ == "__main__":
         
 
 
-    generations = [s["generation"] for s in generation_stats]
-    top_rates = [s["top_win_rate"] for s in generation_stats]
-    avg_rates = [s["avg_win_rate"] for s in generation_stats]
+    generate_plot_overall(generation_stats)
+    
+    
+    
 
-    plt.plot(generations, top_rates, label="Top Win Rate")
-    plt.plot(generations, avg_rates, label="Avg Win Rate")
-    plt.xlabel("Generation")
-    plt.ylabel("Win Rate")
-    plt.title("Deck Evolution Over Generations")
-    plt.legend()
-    plt.show()
-    
-    
-    
-    # stats_df = pd.DataFrame(generation_stats)
-    
-    # plt.figure(figsize=(12, 6))
-    # for j in range(num_decks):
-    #     key = f"deck {j}"
-    #     plt.plot(stats_df["generation"], stats_df[key], label=key, alpha=0.7)
-    
-    # # plot average on top as a bold reference line
-    # deck_columns = [f"deck {j}" for j in range(num_decks)]
-    # stats_df["avg"] = stats_df[deck_columns].mean(axis=1)
-    # plt.plot(stats_df["generation"], stats_df["avg"], label="Average", 
-    #          color="black", linewidth=2, linestyle="--")
-    
-    # plt.xlabel("Generation")
-    # plt.ylabel("Win Rate")
-    # plt.title("Individual Deck Win Rates Over Generations")
-    # plt.legend(loc="upper right", fontsize=7)
-    # plt.show()
     
 
     
