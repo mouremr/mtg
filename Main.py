@@ -69,7 +69,7 @@ if __name__ == "__main__":
     num_generations = 20
 
     for i in range(num_decks):
-        deck_df = construct_deck(Constants.SOS_CARDS)
+        deck_df = construct_deck(Constants.SOS_CARDS, 31, 44)
         deck = deck_to_cards(deck_df)
         decks.append(deck)
         deck_dfs.append(deck_df)

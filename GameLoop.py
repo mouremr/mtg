@@ -197,7 +197,7 @@ class GameLoop:
         for c in attackers:
             c.tapped = True
 
-        # each untapped creature blocks one attacker (greedy)
+        # each untapped creature blocks one attacker
         blockers = opp.untapped_creatures()
         blocks: dict[Card, Optional[Card]] = {a: None for a in attackers}
 

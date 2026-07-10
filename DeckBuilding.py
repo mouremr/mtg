@@ -2,12 +2,12 @@ import pandas as pd
 import Constants
 import random
 
-def construct_deck(cards):
+def construct_deck(cards, min_deck_size, max_deck_size):
     basic_names = ['Forest', 'Swamp', 'Plains', 'Mountain', 'Island']
-
-    color1 = random.choice(['W', 'U', 'B', 'R', 'G'])
-    color2 = random.choice(['W', 'U', 'B', 'R', 'G'])
-    chosen_colors = {color1, color2}
+    num_colors = random.choice([1, 2, 3])
+    
+    all_colors = ['W', 'U', 'B', 'R', 'G']
+    chosen_colors = set(random.sample(all_colors, num_colors))
 
     color_filter = cards['colors'].apply(
         lambda c: len(c) == 0 or all(color in chosen_colors for color in c)
@@ -16,7 +16,7 @@ def construct_deck(cards):
 
     deck = pd.DataFrame(columns=cards.columns)
     
-    while len(deck) < 38:
+    while len(deck) < random.randint(min_deck_size, max_deck_size):
         random_row = card_pool.sample()
         card_name = random_row['name'].values[0]
         

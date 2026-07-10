@@ -80,7 +80,7 @@ def mutate_decks(deck_dfs, winners, num_decks, num_swaps=2):
                 break
             
             # Remove a random nonbasic
-            drop_idx = nonbasics.sample(1).index
+            drop_idx = df.sample(1).index
             dropped_card = df.loc[drop_idx]
             df = df.drop(drop_idx)
             
@@ -137,7 +137,7 @@ def crossover_decks(deck_dfs, winners, amount_to_crossover, tournament_size):
     return crossover_decks
 
 def breed_decks(parent1, parent2, num_cards=36):
-    #identify and keep cards shared between parent decks
+    #find and keep cards shared between parent decks
     common_cards = pd.merge(
         parent1[~parent1['name'].isin(BASIC_NAMES)],
         parent2[~parent2['name'].isin(BASIC_NAMES)],
@@ -166,7 +166,6 @@ def breed_decks(parent1, parent2, num_cards=36):
         if (new_deck['name'] == name).sum() < 4:
             new_deck = pd.concat([new_deck, candidate], ignore_index=True)
         else:
-            #use mutate_decks() instead here maybe
             candidate = Constants.SOS_CARDS[~Constants.SOS_CARDS['name'].isin(BASIC_NAMES)].sample(1)
             new_deck = pd.concat([new_deck, candidate], ignore_index=True)
     
