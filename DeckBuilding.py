@@ -1,6 +1,8 @@
 import pandas as pd
 import Constants
 import random
+from itertools import count
+
 
 def construct_deck(cards, min_deck_size, max_deck_size):
     basic_names = ['Forest', 'Swamp', 'Plains', 'Mountain', 'Island']
@@ -58,9 +60,21 @@ def construct_manabase(deck):
     for color, count in basic_counts.items():
         if color in basic_map and count > 0:
             basic_name = basic_map[color]
-            basic_row = Constants.SOS_CARDS[Constants.SOS_CARDS['name'] == basic_name] #todo: fix this line
+            basic_row = Constants.TOTAL_CARDPOOL[Constants.TOTAL_CARDPOOL['name'] == basic_name] #todo: fix this line
             for i in range(count):
                 deck = pd.concat([deck, basic_row], ignore_index=True)
 
     return deck
 
+
+class DeckRecord:
+    _id_counter = count()
+
+    def __init__(self, deck_df, elo=1200, id=None):
+        self.id = id if id is not None else next(DeckRecord._id_counter)
+        self.deck_df = deck_df
+        self.elo = elo
+        self.cards = None  # populated each generation before play
+
+    def __repr__(self):
+        return f"DeckRecord(id={self.id}, elo={self.elo:.1f})"

@@ -4,7 +4,7 @@ import pandas as pd
 from Cards import deck_to_cards
 from GameLoop import GameLoop
 from EvaluateDecks import evaluate_decks
-import matplotlib.pyplot as plt
+from Elo import update_elo
 
 import Constants
 
@@ -20,79 +20,100 @@ def load_data(filepath):
     cards = cards.drop_duplicates(subset="name", keep="first")
 
 
-    cards = cards.drop(columns=["artist", 'artist', 'artistIds', 'availability', 'borderColor', 
-                                        'edhrecRank', 'edhrecSaltiness', 'finishes', 'foreignData', 'frameEffects', 
-                                        'frameVersion', 'language', 'layout', 'printings', 'purchaseUrls', 
-                                        'securityStamp', 'setCode', 'skuIds', 'sourceProducts', 'flavorText', 'isStorySpotlight', 
-                                        'relatedCards', 'watermark', 'isReprint', 'isFullArt', 'isTextless', 
-                                        'promoTypes', 'isPromo', 'rulings', 'rarity', 'variations', 'uuid', 'number', 'identifiers', 'legalities', 'leadershipSkills', 'manaValue'])
+    columns_to_drop = [
+        "artist", "artistIds", "availability", "borderColor",
+        "edhrecRank", "edhrecSaltiness", "finishes", "foreignData", "frameEffects",
+        "frameVersion", "language", "layout", "printings", "purchaseUrls",
+        "securityStamp", "setCode", "skuIds", "sourceProducts", "flavorText", "isStorySpotlight",
+        "relatedCards", "watermark", "isReprint", "isFullArt", "isTextless",
+        "promoTypes", "isPromo", "rulings", "rarity", "variations", "uuid", "number",
+        "identifiers", "legalities", "leadershipSkills", "manaValue",
+    ]
+
+    existing_columns_to_drop = [col for col in columns_to_drop if col in cards.columns]
+    cards = cards.drop(columns=existing_columns_to_drop)
     return cards
 
 
 
-def play_games(n, decks, max_turns, best_of):
-    winners = {}
-    for i in list(combinations(range(n), 2)):
-        match_winners = {}
+def play_games(deck_records, max_turns, best_of, k=32):
+    for i, j in combinations(range(len(deck_records)), 2):
+        rec_a, rec_b = deck_records[i], deck_records[j]
         games_played = 0
-        
-        while games_played < best_of:    
-            deck1 = decks[i[0]]
-            deck2 = decks[i[1]]
-            gameLoop = GameLoop(deck1, deck2, verbose = False)
+        while games_played < best_of:
+            gameLoop = GameLoop(rec_a.cards, rec_b.cards, verbose=False)
             winner = gameLoop.run(max_turns=max_turns)
-            if(winner is not None):
-                winnerIndex = i[winner]
-                key = "deck " + str(winnerIndex)
-                match_winners[key] = match_winners.get(key, 0) + 1
+            if winner is not None:
+                score_a = 1.0 if winner == 0 else 0.0
+                rec_a.elo, rec_b.elo = update_elo(rec_a.elo, rec_b.elo, score_a, k=k)
             games_played += 1
+    return deck_records
 
-        if match_winners:
-            match_winner = max(match_winners, key=match_winners.get)
-            winners[match_winner] = winners.get(match_winner, 0) + 1
-    
-    
-    
-    return winners
+
+def evaluate_vs_benchmarks(deck_records, benchmarks, max_turns, games_per_matchup=5):
+    results = {}
+    for rec in deck_records:
+        wins = 0
+        total = 0
+        for bench in benchmarks:
+            for _ in range(games_per_matchup):
+                gameLoop = GameLoop(rec.cards, bench.cards, verbose=False)
+                winner = gameLoop.run(max_turns=max_turns)
+                if winner is not None:
+                    total += 1
+                    if winner == 0:
+                        wins += 1
+        results[rec.id] = wins / total if total else 0.0
+    return results
 
 
 
 if __name__ == "__main__":
     generation_stats = []
-    
-    
+
     print("Loading cards...")
-    Constants.SOS_CARDS = load_data(r"E:\Python\mtg\SOS.json")
-    decks = []
-    deck_dfs = []
+
+    set_codes = [
+        "SOS"
+    ]
+
+    set_dataframes = []
+    for code in set_codes:
+        filepath = rf"E:\Python\mtg\Set_json\{code}.json"
+        set_df = load_data(filepath)
+        set_df["setCode"] = code  # tag origin before merging, in case you want it later
+        set_dataframes.append(set_df)
+
+    Constants.TOTAL_CARDPOOL = pd.concat(set_dataframes, ignore_index=True)
+    Constants.TOTAL_CARDPOOL = Constants.TOTAL_CARDPOOL.drop_duplicates(subset="name", keep="first")
+
+    print(f"Loaded {len(Constants.TOTAL_CARDPOOL)} unique cards across {len(set_codes)} sets.")
+
     num_decks = 30
     num_generations = 20
+    num_benchmarks = 4
 
-    for i in range(num_decks):
-        deck_df = construct_deck(Constants.SOS_CARDS, 31, 44)
-        deck = deck_to_cards(deck_df)
-        decks.append(deck)
-        deck_dfs.append(deck_df)
+    deck_records = [DeckRecord(construct_deck(Constants.TOTAL_CARDPOOL, 31, 44)) for _ in range(num_decks)]
 
-    for i in range(num_generations):
-        winners = play_games(len(decks), decks, 25, 5)  # use actual deck count
-        sorted_winners = sorted(winners.items(), key=lambda item: item[1], reverse=True)
-        print("Generation " + str(i + 1) + " Winrates:\n" + str(sorted_winners))
+    benchmark_decks = [DeckRecord(construct_deck(Constants.TOTAL_CARDPOOL, 31, 44)) for _ in range(num_benchmarks)]
+    for bench in benchmark_decks:
+        bench.cards = deck_to_cards(bench.deck_df)
 
-        total_wins = sum(winners.values())
-        
-        
-        win_rates = {key: wins / total_wins for key, wins in winners.items()}
-        generation_stats = update_generation_stats(generation_stats, win_rates, i)
-        
-        
+    for gen in range(num_generations):
+        for rec in deck_records:
+            rec.cards = deck_to_cards(rec.deck_df)
 
+        play_games(deck_records, 25, 5)  #play against decks in current generation, update overall elo score
 
-        
+        bench_results = evaluate_vs_benchmarks(deck_records, benchmark_decks, max_turns=25)
 
-        decks, deck_dfs = evaluate_decks(deck_dfs, winners, .5, .25)
-        
+        ranked = sorted(deck_records, key=lambda r: r.elo, reverse=True)
+        print(f"Generation {gen + 1} Elo:\n" +
+              "\n".join(f"deck {r.id}: {r.elo:.1f} | vs benchmarks: {bench_results[r.id]:.2%}" for r in ranked))
 
+        generation_stats = update_generation_stats(generation_stats, deck_records, bench_results, gen)
+
+        deck_records = evaluate_decks(deck_records, 0.5, 0.25)
 
     generate_plot_overall(generation_stats)
     
