@@ -66,6 +66,9 @@ def evaluate_vs_benchmarks(deck_records, benchmarks, max_turns, games_per_matchu
         results[rec.id] = wins / total if total else 0.0
     return results
 
+def create_winning_deck_csv(ranked):
+    best = ranked[0]  # already sorted by elo, descending
+    best.deck_df.to_csv('best_deck.csv', index=False)
 
 
 if __name__ == "__main__":
@@ -116,7 +119,8 @@ if __name__ == "__main__":
         deck_records = evaluate_decks(deck_records, 0.5, 0.25)
 
     generate_plot_overall(generation_stats)
-    
+
+    create_winning_deck_csv(ranked)
     
     
 

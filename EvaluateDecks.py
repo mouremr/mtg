@@ -110,37 +110,51 @@ def crossover_decks(ranked_records, amount_to_crossover, tournament_size):
     return children
 
 def breed_decks(parent1, parent2, num_cards=36):
-    #find and keep cards shared between parent decks
-    common_cards = pd.merge(
-        parent1[~parent1['name'].isin(BASIC_NAMES)],
-        parent2[~parent2['name'].isin(BASIC_NAMES)],
-        on='name'
-    )['name'].tolist()
-    
     new_deck = pd.DataFrame(columns=parent1.columns)
-    for card_name in common_cards:
-        card = parent1[parent1['name'] == card_name].iloc[0]
-        new_deck = pd.concat([new_deck, pd.DataFrame([card])], ignore_index=True)
     
+    # --- Fix 1: Properly find common cards without cartesian products ---
+    p1_nonbasics = parent1[~parent1['name'].isin(BASIC_NAMES)]
+    p2_nonbasics = parent2[~parent2['name'].isin(BASIC_NAMES)]
     
+    # Find unique common names
+    common_names = set(p1_nonbasics['name']).intersection(set(p2_nonbasics['name']))
+    
+    for card_name in common_names:
+        # How many did parent 1 have? How many did parent 2 have?
+        count1 = (p1_nonbasics['name'] == card_name).sum()
+        count2 = (p2_nonbasics['name'] == card_name).sum()
+        
+        # Inherit the minimum count present in both (capped at 4)
+        num_to_add = min(count1, count2, 4)
+        
+        card_row = p1_nonbasics[p1_nonbasics['name'] == card_name].iloc[0]
+        rows_to_add = pd.DataFrame([card_row] * num_to_add)
+        new_deck = pd.concat([new_deck, rows_to_add], ignore_index=True)
+        
+    # Track which cards are unique to each parent for the filling phase
+    parent1_remaining = parent1[~parent1['name'].isin(common_names)]
+    parent2_remaining = parent2[~parent2['name'].isin(common_names)]
+    
+    # --- Fix 2: Keep trying until a valid card (under 4 copies) is found ---
     remaining = num_cards - len(new_deck)
-    parent1_remaining = parent1[~parent1['name'].isin(common_cards)]
-    parent2_remaining = parent2[~parent2['name'].isin(common_cards)]
-    
-    for _ in range(remaining):
-        # alternate filling slots between parents
-        source = parent1_remaining if _ % 2 == 0 else parent2_remaining
+    for i in range(remaining):
+        source = parent1_remaining if i % 2 == 0 else parent2_remaining
+        
+        # If the preferred parent source is empty, use the total card pool
         if source.empty:
             source = Constants.TOTAL_CARDPOOL[~Constants.TOTAL_CARDPOOL['name'].isin(BASIC_NAMES)]
-        
-        #pick a card from parent that doesnt exceed 4 copies, otherwise try a random card.
-        candidate = source.sample(1)
-        name = candidate['name'].values[0]
-        if (new_deck['name'] == name).sum() < 4:
-            new_deck = pd.concat([new_deck, candidate], ignore_index=True)
-        else:
-            candidate = Constants.TOTAL_CARDPOOL[~Constants.TOTAL_CARDPOOL['name'].isin(BASIC_NAMES)].sample(1)
-            new_deck = pd.concat([new_deck, candidate], ignore_index=True)
+            
+        while True:
+            candidate = source.sample(1)
+            name = candidate['name'].values[0]
+            
+            # Strict safety check before appending
+            if (new_deck['name'] == name).sum() < 4:
+                new_deck = pd.concat([new_deck, candidate], ignore_index=True)
+                break
+            else:
+                # If the parent's card fails the limit, fallback to pulling from the general pool
+                source = Constants.TOTAL_CARDPOOL[~Constants.TOTAL_CARDPOOL['name'].isin(BASIC_NAMES)]
     
     new_deck = construct_manabase(new_deck)
     return new_deck
