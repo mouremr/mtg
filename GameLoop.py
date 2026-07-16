@@ -212,20 +212,20 @@ class GameLoop:
         # combat damage
         for attacker, blocker in blocks.items():
             if blocker is None:
-                opp.life -= attacker.power
-                self.log(f"     {attacker.name} deals {attacker.power} damage to {opp.name} (life: {opp.life})")
+                opp.life -= (attacker._power or 0)
+                self.log(f"     {attacker.name} deals {attacker._power or 0} damage to {opp.name} (life: {opp.life})")
             else:
-                attacker.damage += blocker.power
-                blocker.damage += attacker.power
-                self.log(f"     {attacker.name} ({attacker.power}/{attacker.toughness}) vs "
-                         f"{blocker.name} ({blocker.power}/{blocker.toughness})")
+                attacker.damage += (blocker._power or 0)
+                blocker.damage += (attacker._power or 0)
+                self.log(f"     {attacker.name} ({attacker._power or 0}/{attacker._toughness or 0}) vs "
+                         f"{blocker.name} ({blocker._power or 0}/{blocker._toughness or 0})")
 
         self._check_creature_deaths(ap)
         self._check_creature_deaths(opp) 
         
 
     def _check_creature_deaths(self, player: PlayerState):
-        dead = [c for c in player.battlefield if c.is_creature and c.damage >= (c.toughness or 999)]
+        dead = [c for c in player.battlefield if c.is_creature and c.damage >= (c._toughness or 999)]
         for c in dead:
             self._destroy(player, c)
 

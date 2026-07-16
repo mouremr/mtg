@@ -36,12 +36,12 @@ def load_data(filepath):
 
 
 
-def play_games(deck_records, max_turns, best_of, k=32):
+def play_games(deck_records, max_turns, best_of, verbose, k=32):
     for i, j in combinations(range(len(deck_records)), 2):
         rec_a, rec_b = deck_records[i], deck_records[j]
         games_played = 0
         while games_played < best_of:
-            gameLoop = GameLoop(rec_a.cards, rec_b.cards, verbose=False)
+            gameLoop = GameLoop(rec_a.cards, rec_b.cards, verbose=verbose)
             winner = gameLoop.run(max_turns=max_turns)
             if winner is not None:
                 score_a = 1.0 if winner == 0 else 0.0
@@ -74,11 +74,35 @@ def create_winning_deck_csv(ranked):
 if __name__ == "__main__":
     generation_stats = []
 
+    num_decks = 10
+    num_generations = 2
+    num_benchmarks = 4
+    verbose = False;
+
     print("Loading cards...")
 
     set_codes = [
-        "SOS"
+        "BIG",
+        "BLB",
+        "DFT",
+        "DSK",
+        "ECL",
+        "EOE",
+        "FDN",
+        "FIN",
+        "LCI",
+        "MKM",
+        "MSH",
+        "OTJ",
+        "SOS",
+        "SPM",
+        "TDM",
+        "TLA",
+        "TMT",
+        "WOE"
     ]
+
+    # set_codes = ["SOS"]
 
     set_dataframes = []
     for code in set_codes:
@@ -92,10 +116,6 @@ if __name__ == "__main__":
 
     print(f"Loaded {len(Constants.TOTAL_CARDPOOL)} unique cards across {len(set_codes)} sets.")
 
-    num_decks = 30
-    num_generations = 20
-    num_benchmarks = 4
-
     deck_records = [DeckRecord(construct_deck(Constants.TOTAL_CARDPOOL, 31, 44)) for _ in range(num_decks)]
 
     benchmark_decks = [DeckRecord(construct_deck(Constants.TOTAL_CARDPOOL, 31, 44)) for _ in range(num_benchmarks)]
@@ -106,7 +126,7 @@ if __name__ == "__main__":
         for rec in deck_records:
             rec.cards = deck_to_cards(rec.deck_df)
 
-        play_games(deck_records, 25, 5)  #play against decks in current generation, update overall elo score
+        play_games(deck_records, 25, 5, verbose)  #play against decks in current generation, update overall elo score
 
         bench_results = evaluate_vs_benchmarks(deck_records, benchmark_decks, max_turns=25)
 

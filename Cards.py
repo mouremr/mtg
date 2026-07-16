@@ -31,8 +31,8 @@ class Card:
     colors: Tuple
     mana_cost: dict
     cmc: int
-    power: Optional[int]
-    toughness: Optional[int]
+    _power: Optional[int]
+    _toughness: Optional[int]
     oracle_text: str
 
     #Game states
@@ -41,6 +41,18 @@ class Card:
     summoning_sick: bool = True
 
 
+    @property
+    def power(self) -> int:
+        return self._power if self._power is not None else 0
+
+    @property
+    def toughness(self) -> int:
+        return self._toughness if self._toughness is not None else 0
+
+    @property
+    def is_alive(self):
+        # Now toughness will always be an integer
+        return self.toughness > self.damage
 
     @property
     def is_land(self):
@@ -53,10 +65,6 @@ class Card:
     @property
     def is_spell(self):
         return not self.is_land
-
-    @property
-    def is_alive(self):
-        return self.toughness is not None and self.toughness > self.damage
     
     def produces_mana(self):
         basic_produces = {
@@ -107,8 +115,8 @@ def row_to_card(row: pd.Series) -> Card:
         colors=safe_list(row.get('colors')),
         mana_cost=parse_manaCost(row.get('manaCost')),
         cmc=row.get('convertedManaCost'),
-        power=safe_int(row.get('power')),
-        toughness=safe_int(row.get('toughness')),
+        _power=safe_int(row.get('power')),
+        _toughness=safe_int(row.get('toughness')),
         oracle_text=row.get('text', '') or '',
     )
 
