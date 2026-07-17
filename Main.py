@@ -74,9 +74,9 @@ def create_winning_deck_csv(ranked):
 if __name__ == "__main__":
     generation_stats = []
 
-    num_decks = 10
-    num_generations = 2
-    num_benchmarks = 4
+    num_decks = 20
+    num_generations = 15
+    num_benchmarks = 10
     verbose = False;
 
     print("Loading cards...")

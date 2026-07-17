@@ -1,114 +1,134 @@
-colorIdentity,colors,convertedManaCost,keywords,manaCost,name,originalText,originalType,subtypes,supertypes,text,type,types,power,toughness,producedMana,isAlternative,setCode,boosterTypes,rebalancedPrintings,isOnlineOnly,isRebalanced,originalPrintings,originalReleaseDate,loyalty,faceConvertedManaCost,faceManaValue,faceName,otherFaceIds,side,colorIndicator,hasAlternativeDeckLimit,cardParts,asciiName
-[],[],0.0,,,Fabled Passage,"{T}, Sacrifice Fabled Passage: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle. Then if you control four or more lands, untap that land.",Land,[],[],"{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle. Then if you control four or more lands, untap that land.",Land,['Land'],,,,,BLB,['default'],,,,,,,,,,,,,,,
+colorIdentity,colors,convertedManaCost,keywords,manaCost,name,originalText,originalType,subtypes,supertypes,text,type,types,power,toughness,producedMana,isAlternative,setCode,boosterTypes,rebalancedPrintings,isOnlineOnly,isRebalanced,originalPrintings,originalReleaseDate,loyalty,faceConvertedManaCost,faceManaValue,faceName,otherFaceIds,side,colorIndicator,hasAlternativeDeckLimit,cardParts,asciiName,cmc_diff
+['W'],['W'],2.0,,{1}{W},Sunstar Chaplain,,,"['Human', 'Cleric']",[],"At the beginning of your end step, if you control two or more tapped creatures, put a +1/+1 counter on target creature you control.
+{2}, Remove a +1/+1 counter from a creature you control: Tap target artifact or creature.",Creature — Human Cleric,['Creature'],3,2,,,EOE,['default'],,,,,,,,,,,,,,,,
+['W'],['W'],3.0,['Survival'],{2}{W},Glimmer Seeker,"Survival — At the beginning of your second main phase, if Glimmer Seeker is tapped, draw a card if you control a Glimmer creature. If you don't control a Glimmer creature, create a 1/1 white Glimmer enchantment creature token.",Creature – Human Survivor,"['Human', 'Survivor']",[],"Survival — At the beginning of your second main phase, if this creature is tapped, draw a card if you control a Glimmer creature. If you don't control a Glimmer creature, create a 1/1 white Glimmer enchantment creature token.",Creature — Human Survivor,['Creature'],3,3,,,DSK,['default'],,,,,,,,,,,,,,,,
+['W'],['W'],2.0,,{1}{W},Seasoned Consultant,"Whenever you attack with three or more creatures, Seasoned Consultant gets +2/+0 until end of turn.",Creature – Human Detective,"['Human', 'Detective']",[],"Whenever you attack with three or more creatures, this creature gets +2/+0 until end of turn.",Creature — Human Detective,['Creature'],1,3,,,MKM,['default'],,,,,,,,,,,,,,,,
+[],[],6.0,"['Cycling', 'Flash']",{6},Runaway Boulder,"Flash
+When Runaway Boulder enters the battlefield, it deals 6 damage to target creature an opponent controls.
+Cycling {2} ({2}, Discard this card: Draw a card.)",Artifact,[],[],"Flash
+When this artifact enters, it deals 6 damage to target creature an opponent controls.
+Cycling {2} ({2}, Discard this card: Draw a card.)",Artifact,['Artifact'],,,,,LCI,['default'],,,,,,,,,,,,,,,,
+['W'],['W'],4.0,"['Flying', 'Mobilize']",{3}{W},Dragonback Lancer,"Flying
+Mobilize 1 (Whenever this creature attacks, create a tapped and attacking 1/1 red Warrior creature token. Sacrifice it at the beginning of the next end step.)",Creature – Human Soldier,"['Human', 'Soldier']",[],"Flying
+Mobilize 1 (Whenever this creature attacks, create a tapped and attacking 1/1 red Warrior creature token. Sacrifice it at the beginning of the next end step.)",Creature — Human Soldier,['Creature'],3,3,,,TDM,['default'],,,,,,,,,,,,,,,,
+['R'],['R'],4.0,"['Trample', 'Treasure']",{3}{R},Flamekin Gildweaver,,,"['Elemental', 'Sorcerer']",[],"Trample
+When this creature enters, create a Treasure token. (It's an artifact with ""{T}, Sacrifice this token: Add one mana of any color."")",Creature — Elemental Sorcerer,['Creature'],4,3,"['B', 'G', 'R', 'U', 'W']",,ECL,['default'],,,,,,,,,,,,,,,,
+[],[],3.0,,{3},Scrawling Crawler,"At the beginning of your upkeep, each player draws a card.
+Whenever an opponent draws a card, that player loses 1 life.",Artifact Creature – Phyrexian Construct,"['Phyrexian', 'Construct']",[],"At the beginning of your upkeep, each player draws a card.
+Whenever an opponent draws a card, that player loses 1 life.",Artifact Creature — Phyrexian Construct,"['Artifact', 'Creature']",3,2,,,FDN,['default'],,,,,,,,,,,,,,,,
+['B'],['B'],5.0,,{3}{B},Defiled Crypt // Cadaver Lab,"Whenever one or more cards leave your graveyard, create a 2/2 black Horror enchantment creature token. This ability triggers only once each turn. // When you unlock this door, return target creature card from your graveyard to your hand.
+(You may cast either half. That door unlocks on the battlefield. As a sorcery, you may pay the mana cost of a locked door to unlock it.)",,['Room'],[],"Whenever one or more cards leave your graveyard, create a 2/2 black Horror enchantment creature token. This ability triggers only once each turn.
+(You may cast either half. That door unlocks on the battlefield. As a sorcery, you may pay the mana cost of a locked door to unlock it.)",Enchantment — Room,['Enchantment'],,,,,DSK,['default'],,,,,,,4.0,4.0,Defiled Crypt,['a45c2b4b-3301-532f-8963-810cbcc5e0cd'],a,,,,,
+"['B', 'R']",[],0.0,['Surveil'],,Ominous Asylum,,,[],[],"This land enters tapped.
+{T}: Add {B} or {R}.
+{4}, {T}: Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",Land,['Land'],,,"['B', 'R']",,SPM,['default'],,,,,,,,,,,,,,,,
+['W'],['W'],1.0,['Spree'],{W},Requisition Raid,"Spree (Choose one or more additional costs.)
++ {1} — Destroy target artifact.
++ {1} — Destroy target enchantment.
++ {1} — Put a +1/+1 counter on each creature target player controls.",Sorcery,[],[],"Spree (Choose one or more additional costs.)
++ {1} — Destroy target artifact.
++ {1} — Destroy target enchantment.
++ {1} — Put a +1/+1 counter on each creature target player controls.",Sorcery,['Sorcery'],,,,,OTJ,['default'],,,,,,,,,,,,,,,,
+['W'],['W'],4.0,"['Disguise', 'Flying', 'Lifelink', 'Ward']",{2}{W}{W},Aurelia's Vindicator,"Flying, lifelink, ward {2}
+Disguise {X}{3}{W}
+When Aurelia's Vindicator is turned face up, exile up to X other target creatures from the battlefield and/or creature cards from graveyards.
+When Aurelia's Vindicator leaves the battlefield, return the exiled cards to their owners' hands.",Creature – Angel,['Angel'],[],"Flying, lifelink, ward {2}
+Disguise {X}{3}{W}
+When this creature is turned face up, exile up to X other target creatures from the battlefield and/or creature cards from graveyards.
+When this creature leaves the battlefield, return the exiled cards to their owners' hands.",Creature — Angel,['Creature'],4,2,,,MKM,['default'],,,,,,,,,,,,,,,,
+['W'],['W'],2.0,['Flying'],{W}{W},Leonin Skyhunter,Flying,Creature – Cat Knight,"['Cat', 'Knight']",[],Flying,Creature — Cat Knight,['Creature'],2,2,,,FDN,,,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Country Roads,"This land enters tapped unless you control a Mount or Vehicle.
+{T}: Add {W}.
+{1}{W}, {T}, Sacrifice this land: Create a 1/1 colorless Pilot creature token with ""This token saddles Mounts and crews Vehicles as though its power were 2 greater."" Activate only as a sorcery.",Land,[],[],"This land enters tapped unless you control a Mount or Vehicle.
+{T}: Add {W}.
+{1}{W}, {T}, Sacrifice this land: Create a 1/1 colorless Pilot creature token with ""This token saddles Mounts and crews Vehicles as though its power were 2 greater."" Activate only as a sorcery.",Land,['Land'],,,['W'],,DFT,['default'],,,,,,,,,,,,,,,,
+['U'],[],0.0,,,Mistrise Village,"This land enters tapped unless you control a Mountain or a Forest.
+{T}: Add {U}.
+{U}, {T}: The next spell you cast this turn can't be countered.",Land,[],[],"This land enters tapped unless you control a Mountain or a Forest.
+{T}: Add {U}.
+{U}, {T}: The next spell you cast this turn can't be countered.",Land,['Land'],,,['U'],,TDM,['default'],,,,,,,,,,,,,,,,
+['W'],['W'],4.0,"['Dragonfire Dive', 'Flying', 'Transform']",{3}{W},"Dion, Bahamut's Dominant // Bahamut, Warden of Light",,,"['Human', 'Noble', 'Knight']",['Legendary'],"Dragonfire Dive — During your turn, Dion and other Knights you control have flying.
+When Dion enters, create a 2/2 white Knight creature token.
+{4}{W}{W}, {T}: Exile Dion, then return it to the battlefield transformed under its owner's control. Activate only as a sorcery.",Legendary Creature — Human Noble Knight,['Creature'],3,3,,,FIN,['default'],,,,,,,4.0,4.0,"Dion, Bahamut's Dominant",['55eb1f9d-a009-535c-9804-5a2ae1fa9284'],a,,,,,
+['G'],['G'],7.0,['Trample'],{5}{G}{G},Vaultborn Tyrant,"Trample
+Whenever Vaultborn Tyrant or another creature with power 4 or greater enters the battlefield under your control, you gain 3 life and draw a card.
+When Vaultborn Tyrant dies, if it's not a token, create a token that's a copy of it, except it's an artifact in addition to its other types.",Creature – Dinosaur,['Dinosaur'],[],"Trample
+Whenever this creature or another creature you control with power 4 or greater enters, you gain 3 life and draw a card.
+When this creature dies, if it's not a token, create a token that's a copy of it, except it's an artifact in addition to its other types.",Creature — Dinosaur,['Creature'],6,6,,,BIG,,,,,,,,,,,,,,,,,
+['B'],['B'],3.0,['Connive'],{2}{B},"Baron Strucker, HYDRA Overlord",,,"['Human', 'Villain']",['Legendary'],"Villain spells you cast cost {1} less to cast.
+Whenever another Villain you control enters, you may have it connive. Do this only once each turn. (Draw a card, then discard a card. If you discarded a nonland card, put a +1/+1 counter on that creature.)",Legendary Creature — Human Villain,['Creature'],2,2,,,MSH,,,,,,,,,,,,,,,,,
+['W'],['W'],3.0,['Flying'],{2}{W},Clarion Conqueror // Clarion Conqueror,"Flying
+Activated abilities of artifacts, creatures, and planeswalkers can't be activated.",Creature – Dragon,['Dragon'],[],"Flying
+Activated abilities of artifacts, creatures, and planeswalkers can't be activated.",Creature — Dragon,['Creature'],3,3,,,TDM,,,,,,,,,,Clarion Conqueror,['8c72b366-acf7-52ab-b68d-a58c66387d4b'],a,,,,,
+['W'],['W'],2.0,['Scry'],{1}{W},Compassionate Healer,,,"['Human', 'Cleric', 'Ally']",[],"Whenever this creature becomes tapped, you gain 1 life and scry 1. (Look at the top card of your library. You may put it on the bottom.)",Creature — Human Cleric Ally,['Creature'],2,2,,,TLA,['default'],,,,,,,,,,,,,,,,
+"['B', 'G']",[],0.0,['Food'],,Restless Cottage,"Restless Cottage enters the battlefield tapped.
+{T}: Add {B} or {G}.
+{2}{B}{G}: Restless Cottage becomes a 4/4 black and green Horror creature until end of turn. It's still a land.
+Whenever Restless Cottage attacks, create a Food token and exile up to one target card from a graveyard.",Land,[],[],"This land enters tapped.
+{T}: Add {B} or {G}.
+{2}{B}{G}: This land becomes a 4/4 black and green Horror creature until end of turn. It's still a land.
+Whenever this land attacks, create a Food token and exile up to one target card from a graveyard.",Land,['Land'],,,"['B', 'G']",,WOE,['default'],,,,,,,,,,,,,,,,
+['B'],['B'],2.0,,{1}{B},Fell,Destroy target creature.,Sorcery,[],[],Destroy target creature.,Sorcery,['Sorcery'],,,,,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],['W'],3.0,,{2}{W},Daring Mechanic,{3}{W}: Put a +1/+1 counter on target Mount or Vehicle.,Creature – Human Artificer,"['Human', 'Artificer']",[],{3}{W}: Put a +1/+1 counter on target Mount or Vehicle.,Creature — Human Artificer,['Creature'],3,3,,,DFT,['default'],,,,,,,,,,,,,,,,
+['W'],['W'],6.0,"['Transform', 'Vigilance']",{4}{W}{W},"Ojer Taq, Deepest Foundation // Temple of Civilization","Vigilance
+If one or more creature tokens would be created under your control, three times that many of those tokens are created instead.
+When Ojer Taq dies, return it to the battlefield tapped and transformed under its owner's control.",Legendary Creature – God,['God'],['Legendary'],"Vigilance
+If one or more creature tokens would be created under your control, three times that many of those tokens are created instead.
+When Ojer Taq dies, return it to the battlefield tapped and transformed under its owner's control.",Legendary Creature — God,['Creature'],6,6,['W'],,LCI,['default'],,,,,,,6.0,6.0,"Ojer Taq, Deepest Foundation",['f8514939-0b54-5ae5-9454-b06c2497b12e'],a,,,,,
+['B'],['B'],5.0,['Indestructible'],{B}{B}{B}{B}{B},"Zodiark, Umbral God",,,['God'],['Legendary'],"Indestructible
+When Zodiark enters, each player sacrifices half the non-God creatures they control of their choice, rounded down.
+Whenever a player sacrifices another creature, put a +1/+1 counter on Zodiark.",Legendary Creature — God,['Creature'],5,5,,,FIN,['default'],,,,,,,,,,,,,,,,
+"['R', 'U']",[],0.0,,,Steam Vents // Steam Vents,,,"['Island', 'Mountain']",[],"({T}: Add {U} or {R}.)
+As this land enters, you may pay 2 life. If you don't, it enters tapped.",Land — Island Mountain,['Land'],,,"['R', 'U']",,ECL,['default'],,,,,,,,,Steam Vents,['956c4c38-0a60-599d-a2bb-6fbf1b68a648'],a,,,,,
 [],[],2.0,['Surveil'],{2},Foraging Wickermaw,,,['Scarecrow'],[],"When this creature enters, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)
-{1}: Add one mana of any color. This creature becomes that color until end of turn. Activate only once each turn.",Artifact Creature — Scarecrow,"['Artifact', 'Creature']",1,3,"['B', 'G', 'R', 'U', 'W']",,ECL,['default'],,,,,,,,,,,,,,,
-"['R', 'U']",['R'],4.0,['Flying'],{3}{R},Runescale Stormbrood // Chilling Screech,"Counter target spell with mana value 2 or less. (Then shuffle this card into its owner's library.) // Flying
-Whenever you cast a noncreature spell or a Dragon spell, this creature gets +2/+0 until end of turn.",Creature – Dragon,['Dragon'],[],"Flying
-Whenever you cast a noncreature spell or a Dragon spell, this creature gets +2/+0 until end of turn.",Creature — Dragon,['Creature'],2,4,,,TDM,['default'],,,,,,,4.0,4.0,Runescale Stormbrood,['0326e0d3-8af0-510e-9deb-c65029593058'],a,,,,
-[],[],0.0,"['Scry', 'Vigilance']",,Rumble Arena,,,[],[],"Vigilance
-When this land enters, scry 1. (Look at the top card of your library. You may put it on the bottom.)
+{1}: Add one mana of any color. This creature becomes that color until end of turn. Activate only once each turn.",Artifact Creature — Scarecrow,"['Artifact', 'Creature']",1,3,"['B', 'G', 'R', 'U', 'W']",,ECL,['default'],,,,,,,,,,,,,,,,
+['R'],['R'],2.0,['Disguise'],{1}{R},Pyrotechnic Performer,"Disguise {R} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+Whenever Pyrotechnic Performer or another creature you control is turned face up, that creature deals damage equal to its power to each opponent.",Creature – Lizard Assassin,"['Lizard', 'Assassin']",[],"Disguise {R} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+Whenever this creature or another creature you control is turned face up, that creature deals damage equal to its power to each opponent.",Creature — Lizard Assassin,['Creature'],3,2,,,MKM,['default'],,,,,,,,,,,,,,,,
+"['R', 'W']","['R', 'W']",4.0,,{2}{R}{W},"Sami, Ship's Engineer",,,"['Human', 'Artificer']",['Legendary'],"At the beginning of your end step, if you control two or more tapped creatures, create a tapped 2/2 colorless Robot artifact creature token.",Legendary Creature — Human Artificer,['Creature'],2,4,,,EOE,['default'],,,,,,,,,,,,,,,,
+['G'],['G'],3.0,,{2}{G},Sandstorm Salvager,"When Sandstorm Salvager enters the battlefield, create a 3/3 colorless Golem artifact creature token.
+{2}, {T}: Put a +1/+1 counter on each creature token you control. They gain trample until end of turn.",Creature – Human Artificer,"['Human', 'Artificer']",[],"When this creature enters, create a 3/3 colorless Golem artifact creature token.
+{2}, {T}: Put a +1/+1 counter on each creature token you control. They gain trample until end of turn.",Creature — Human Artificer,['Creature'],1,1,,,BIG,,,,,,,,,,,,,,,,,
+['W'],['W'],2.0,,{1}{W},Cosmium Blast,Cosmium Blast deals 4 damage to target attacking or blocking creature.,Instant,[],[],Cosmium Blast deals 4 damage to target attacking or blocking creature.,Instant,['Instant'],,,,,LCI,['default'],,,,,,,,,,,,,,,,
+['B'],['B'],4.0,['Investigate'],{3}{B},Hostile Investigator,"When Hostile Investigator enters the battlefield, target opponent discards a card.
+Whenever one or more players discard one or more cards, investigate. This ability triggers only once each turn. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")",Creature – Ogre Rogue Detective,"['Ogre', 'Rogue', 'Detective']",[],"When this creature enters, target opponent discards a card.
+Whenever one or more players discard one or more cards, investigate. This ability triggers only once each turn. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this token: Draw a card."")",Creature — Ogre Rogue Detective,['Creature'],4,3,,,BIG,,,,,,,,,,,,,,,,,
+['W'],['W'],4.0,,{3}{W},Luxknight Breacher,,,"['Human', 'Knight']",[],This creature enters with a +1/+1 counter on it for each other creature and/or artifact you control.,Creature — Human Knight,['Creature'],2,2,,,EOE,['default'],,,,,,,,,,,,,,,,
+['W'],['W'],1.0,,{W},Goldmeadow Nomad,,,"['Kithkin', 'Scout']",[],"{W}, Exile this card from your graveyard: Create a 1/1 green and white Kithkin creature token. Activate only as a sorcery.",Creature — Kithkin Scout,['Creature'],1,2,,,ECL,['default'],,,,,,,,,,,,,,,,
+[],[],0.0,,,Three Tree City,"As Three Tree City enters, choose a creature type.
 {T}: Add {C}.
-{1}, {T}: Add one mana of any color.",Land,['Land'],,,"['B', 'C', 'G', 'R', 'U', 'W']",,TLA,['default'],,,,,,,,,,,,,,,
-['R'],['R'],2.0,,{1}{R},Vengeful Tracker,"Whenever an opponent sacrifices an artifact, Vengeful Tracker deals 2 damage to them.",Creature – Human Detective,"['Human', 'Detective']",[],"Whenever an opponent sacrifices an artifact, this creature deals 2 damage to them.",Creature — Human Detective,['Creature'],2,2,,,MKM,['default'],,,,,,,,,,,,,,,
-[],[],2.0,['Discover'],{2},Buried Treasure,"{T}, Sacrifice Buried Treasure: Add one mana of any color.
-{5}, Exile Buried Treasure from your graveyard: Discover 5. Activate only as a sorcery. (Exile cards from the top of your library until you exile a nonland card with mana value 5 or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)",Artifact – Treasure,['Treasure'],[],"{T}, Sacrifice this artifact: Add one mana of any color.
-{5}, Exile this card from your graveyard: Discover 5. Activate only as a sorcery. (Exile cards from the top of your library until you exile a nonland card with mana value 5 or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)",Artifact — Treasure,['Artifact'],,,"['B', 'G', 'R', 'U', 'W']",,LCI,['default'],,,,,,,,,,,,,,,
-['R'],['R'],2.0,,{1}{R},Hoarder's Overflow,"When Hoarder's Overflow enters and whenever you expend 4, put a stash counter on it. (You expend 4 as you spend your fourth total mana to cast spells during a turn.)
-{1}{R}, Sacrifice Hoarder's Overflow: Discard your hand, then draw cards equal to the number of stash counters on Hoarder's Overflow.",Enchantment,[],[],"When this enchantment enters and whenever you expend 4, put a stash counter on it. (You expend 4 as you spend your fourth total mana to cast spells during a turn.)
-{1}{R}, Sacrifice this enchantment: Discard your hand, then draw cards equal to the number of stash counters on this enchantment.",Enchantment,['Enchantment'],,,,,BLB,['default'],,,,,,,,,,,,,,,
-['R'],['R'],2.0,"['Exhaust', 'Prowess']",{1}{R},"Mai, Jaded Edge",,,"['Human', 'Noble']",['Legendary'],"Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)
-Exhaust — {3}: Put a double strike counter on Mai. (Activate each exhaust ability only once.)",Legendary Creature — Human Noble,['Creature'],1,3,,,TLA,['default'],,,,,,,,,,,,,,,
-['R'],['R'],2.0,['Offspring'],{1}{R},Steampath Charger,"Offspring {2} (You may pay an additional {2} as you cast this spell. If you do, when this creature enters, create a 1/1 token copy of it.)
-When this creature dies, it deals 1 damage to target player.",Creature – Lizard Warlock,"['Lizard', 'Warlock']",[],"Offspring {2} (You may pay an additional {2} as you cast this spell. If you do, when this creature enters, create a 1/1 token copy of it.)
-When this creature dies, it deals 1 damage to target player.",Creature — Lizard Warlock,['Creature'],2,1,,,BLB,['default'],,,,,,,,,,,,,,,
-['R'],['R'],3.0,['Flash'],{X}{R}{R}{R},Fated Firepower,,,[],[],"Flash
-This enchantment enters with X fire counters on it.
-If a source you control would deal damage to an opponent or a permanent an opponent controls, it deals that much damage plus an amount of damage equal to the number of fire counters on this enchantment instead.",Enchantment,['Enchantment'],,,,,TLA,['default'],,,,,,,,,,,,,,,
-['R'],['R'],3.0,['Double strike'],{2}{R},Raging Redcap,Double strike (This creature deals both first-strike and regular combat damage.),Creature – Goblin Knight,"['Goblin', 'Knight']",[],Double strike (This creature deals both first-strike and regular combat damage.),Creature — Goblin Knight,['Creature'],1,2,,,FDN,,,,,,,,,,,,,,,,
-"['G', 'U']",[],0.0,,,"Guadosalam, Farplane Gateway",,,['Town'],[],"This land enters tapped.
-{T}: Add {G} or {U}.",Land — Town,['Land'],,,"['G', 'U']",,FIN,['default'],,,,,,,,,,,,,,,
-[],[],0.0,,,Maze's End,"This land enters tapped.
+{2}, {T}: Choose a color. Add an amount of mana of that color equal to the number of creatures you control of the chosen type.",Legendary Land,[],['Legendary'],"As Three Tree City enters, choose a creature type.
 {T}: Add {C}.
-{3}, {T}, Return this land to its owner's hand: Search your library for a Gate card, put it onto the battlefield, then shuffle. If you control ten or more Gates with different names, you win the game.",Land,[],[],"This land enters tapped.
-{T}: Add {C}.
-{3}, {T}, Return this land to its owner's hand: Search your library for a Gate card, put it onto the battlefield, then shuffle. If you control ten or more Gates with different names, you win the game.",Land,['Land'],,,['C'],,FDN,,,,,,,,,,,,,,,,
-['R'],['R'],4.0,['Void'],{3}{R},Roving Actuator,,,['Robot'],[],"Void — When this creature enters, if a nonland permanent left the battlefield this turn or a spell was warped this turn, exile up to one target instant or sorcery card with mana value 2 or less from your graveyard. Copy it. You may cast the copy without paying its mana cost.",Artifact Creature — Robot,"['Artifact', 'Creature']",3,4,,,EOE,['default'],,,,,,,,,,,,,,,
-['R'],['R'],2.0,,{1}{R},Rig for War,,,[],[],Target creature gets +3/+0 and gains first strike and reach until end of turn.,Instant,['Instant'],,,,,EOE,['default'],,,,,,,,,,,,,,,
-['R'],['R'],3.0,['Menace'],{2}{R},"Lightning, Security Sergeant",,,"['Human', 'Soldier']",['Legendary'],"Menace (This creature can't be blocked except by two or more creatures.)
-Whenever Lightning deals combat damage to a player, exile the top card of your library. You may play that card for as long as you control Lightning.",Legendary Creature — Human Soldier,['Creature'],2,3,,,FIN,,,,,,,,,,,,,,,,
-['R'],['R'],2.0,,{1}{R},Betrayer's Bargain,"As an additional cost to cast this spell, sacrifice a creature or enchantment or pay {2}.
-Betrayer's Bargain deals 5 damage to target creature. If that creature would die this turn, exile it instead.",Instant,[],[],"As an additional cost to cast this spell, sacrifice a creature or enchantment or pay {2}.
-Betrayer's Bargain deals 5 damage to target creature. If that creature would die this turn, exile it instead.",Instant,['Instant'],,,,,DSK,['default'],,,,,,,,,,,,,,,
-"['G', 'W']",[],0.0,,,Hushwood Verge,"{T}: Add {G}.
-{T}: Add {W}. Activate only if you control a Forest or a Plains.",Land,[],[],"{T}: Add {G}.
-{T}: Add {W}. Activate only if you control a Forest or a Plains.",Land,['Land'],,,"['G', 'W']",,DSK,['default'],,,,,,,,,,,,,,,
-['R'],['R'],2.0,,{1}{R},Ratcatcher Trainee // Pest Problem,"Create two 1/1 black Rat creature tokens with ""This creature can't block."" (Then exile this card. You may cast the creature later from exile.) // As long as it's your turn, Ratcatcher Trainee has first strike.",Creature – Human Peasant,"['Human', 'Peasant']",[],"During your turn, this creature has first strike.",Creature — Human Peasant,['Creature'],2,1,,,WOE,['default'],,,,,,,2.0,2.0,Ratcatcher Trainee,['725f44a8-8011-5d6b-be7d-4d349ca015da'],a,,,,
-['R'],['R'],2.0,['Flashback'],{1}{R},Tome Blast,,,[],[],"Tome Blast deals 2 damage to any target.
-Flashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",Sorcery,['Sorcery'],,,,,SOS,,,,,,,,,,,,,,,,
-['R'],['R'],3.0,,{1}{R}{R},Ruinous Rampage,,,[],[],"Choose one —
-• Ruinous Rampage deals 3 damage to each opponent.
-• Exile all artifacts with mana value 3 or less.",Sorcery,['Sorcery'],,,,,EOE,['default'],,,,,,,,,,,,,,,
-[],[],4.0,,{4},Juggernaut,"This creature attacks each combat if able.
-This creature can't be blocked by Walls.",Artifact Creature – Juggernaut,['Juggernaut'],[],"This creature attacks each combat if able.
-This creature can't be blocked by Walls.",Artifact Creature — Juggernaut,"['Artifact', 'Creature']",5,3,,,FDN,['default'],,,,,,,,,,,,,,,
-['R'],['R'],2.0,"['Haste', 'Indestructible', 'Start your engines!']",{1}{R},"Hazoret, Godseeker","Indestructible, haste
-Start your engines (If you have no speed, it starts at 1. It increases once on each of your turns when an opponent loses life. Max speed is 4.)
-{1}, {T}: Target creature with power 2 or less can't be blocked this turn.
-Hazoret can't attack or block unless you have max speed.",Legendary Creature – God,['God'],['Legendary'],"Indestructible, haste
-Start your engines! (If you have no speed, it starts at 1. It increases once on each of your turns when an opponent loses life. Max speed is 4.)
-{1}, {T}: Target creature with power 2 or less can't be blocked this turn.
-Hazoret can't attack or block unless you have max speed.",Legendary Creature — God,['Creature'],5,3,,,DFT,['default'],,,,,,,,,,,,,,,
-"['B', 'W']",[],0.0,,,Concealed Courtyard,"Concealed Courtyard enters the battlefield tapped unless you control two or fewer other lands.
-{T}: Add {W} or {B}.",Land,[],[],"This land enters tapped unless you control two or fewer other lands.
-{T}: Add {W} or {B}.",Land,['Land'],,,"['B', 'W']",,OTJ,['default'],,,,,,,,,,,,,,,
-['R'],['R'],2.0,,{1}{R},Kargan Dragonrider,"As long as you control a Dragon, this creature has flying.",Creature – Human Warrior,"['Human', 'Warrior']",[],"As long as you control a Dragon, this creature has flying.",Creature — Human Warrior,['Creature'],2,2,,,FDN,,,,,,,,,,,,,,,,
-[],[],4.0,"['Equip', 'Gift']",{4},Starforged Sword,"Gift a tapped Fish (You may promise an opponent a gift as you cast this spell. If you do, when it enters, they create a tapped 1/1 blue Fish creature token.)
-When Starforged Sword enters, if the gift was promised, attach Starforged Sword to target creature you control.
-Equipped creature gets +3/+3 and loses flying.
-Equip {3}",Artifact – Equipment,['Equipment'],[],"Gift a tapped Fish (You may promise an opponent a gift as you cast this spell. If you do, when it enters, they create a tapped 1/1 blue Fish creature token.)
-When this Equipment enters, if the gift was promised, attach this Equipment to target creature you control.
-Equipped creature gets +3/+3 and loses flying.
-Equip {3}",Artifact — Equipment,['Artifact'],,,,,BLB,['default'],,,,,,,,,,,,,,,
-['R'],['R'],2.0,,{1}{R},Ratcatcher Trainee // Pest Problem,"Create two 1/1 black Rat creature tokens with ""This creature can't block."" (Then exile this card. You may cast the creature later from exile.) // As long as it's your turn, Ratcatcher Trainee has first strike.",Creature – Human Peasant,"['Human', 'Peasant']",[],"During your turn, this creature has first strike.",Creature — Human Peasant,['Creature'],2,1,,,WOE,['default'],,,,,,,2.0,2.0,Ratcatcher Trainee,['725f44a8-8011-5d6b-be7d-4d349ca015da'],a,,,,
-['R'],['R'],2.0,,{1}{R},Burning Sun Cavalry,"Whenever Burning Sun Cavalry attacks or blocks while you control a Dinosaur, Burning Sun Cavalry gets +1/+1 until end of turn.",Creature – Human Knight,"['Human', 'Knight']",[],"Whenever this creature attacks or blocks while you control a Dinosaur, this creature gets +1/+1 until end of turn.",Creature — Human Knight,['Creature'],2,2,,,LCI,['default'],,,,,,,,,,,,,,,
-['U'],[],0.0,['Mill'],,"Jidoor, Aristocratic Capital // Overture",,,['Town'],[],"This land enters tapped.
-{T}: Add {U}.",Land — Town,['Land'],,,['U'],,FIN,['default'],,,,,,,0.0,0.0,"Jidoor, Aristocratic Capital",['3d2fec23-db8e-57e9-ae85-a56d560d694c'],a,,,,
-['R'],['R'],5.0,,{4}{R},Breaching Dragonstorm,"When this enchantment enters, exile cards from the top of your library until you exile a nonland card. You may cast it without paying its mana cost if that spell's mana value is 8 or less. If you don't, put that card into your hand.
-When a Dragon you control enters, return this enchantment to its owner's hand.",Enchantment,[],[],"When this enchantment enters, exile cards from the top of your library until you exile a nonland card. You may cast it without paying its mana cost if that spell's mana value is 8 or less. If you don't, put that card into your hand.
-When a Dragon you control enters, return this enchantment to its owner's hand.",Enchantment,['Enchantment'],,,,,TDM,['default'],,,,,,,,,,,,,,,
-['R'],['R'],6.0,['Station'],{5}{R},Galvanizing Sawship,,,['Spacecraft'],[],"Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 3+.)
-3+ | Flying, haste",Artifact — Spacecraft,['Artifact'],6,5,,,EOE,['default'],,,,,,,,,,,,,,,
-[],[],5.0,"['Crew', 'Flying']",{5},Turtle Blimp,,,['Vehicle'],[],"Flying
-When this Vehicle enters, create a 2/2 red Mutant creature token.
-Crew 2 (Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)",Artifact — Vehicle,['Artifact'],3,4,,,TMT,,,,,,,,,,,,,,,,
-['R'],['R'],4.0,"['Equip', 'Job select']",{3}{R},Warrior's Sword,,,['Equipment'],[],"Job select (When this Equipment enters, create a 1/1 colorless Hero creature token, then attach this to it.)
-Equipped creature gets +3/+2 and is a Warrior in addition to its other types.
-Equip {5} ({5}: Attach to target creature you control. Equip only as a sorcery.)",Artifact — Equipment,['Artifact'],,,,,FIN,['default'],,,,,,,,,,,,,,,
-"['G', 'R']",[],0.0,,,"Gongaga, Reactor Town",,,['Town'],[],"This land enters tapped.
-{T}: Add {R} or {G}.",Land — Town,['Land'],,,"['G', 'R']",,FIN,['default'],,,,,,,,,,,,,,,
-['R'],['R'],2.0,['Treasure'],{1}{R},Piggy Bank,"When Piggy Bank dies, create a Treasure token. (It's an artifact with ""{T}, Sacrifice this artifact: Add one mana of any color."")",Artifact Creature – Boar Toy,"['Boar', 'Toy']",[],"When this creature dies, create a Treasure token. (It's an artifact with ""{T}, Sacrifice this token: Add one mana of any color."")",Artifact Creature — Boar Toy,"['Artifact', 'Creature']",3,2,"['B', 'G', 'R', 'U', 'W']",,DSK,['default'],,,,,,,,,,,,,,,
-['R'],['R'],1.0,['Exhaust'],{R},Greasewrench Goblin,"Exhaust — {2}{R}: Discard up to two cards, then draw that many cards. Put a +1/+1 counter on this creature. (Activate each exhaust ability only once.)",Creature – Goblin Artificer,"['Goblin', 'Artificer']",[],"Exhaust — {2}{R}: Discard up to two cards, then draw that many cards. Put a +1/+1 counter on this creature. (Activate each exhaust ability only once.)",Creature — Goblin Artificer,['Creature'],2,1,,,DFT,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
-['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,
+{2}, {T}: Choose a color. Add an amount of mana of that color equal to the number of creatures you control of the chosen type.",Legendary Land,['Land'],,,"['B', 'C', 'G', 'R', 'U', 'W']",,BLB,['default'],,,,,,,,,,,,,,,,
+"['U', 'W']","['U', 'W']",3.0,,{W/U}{W/U}{W/U},Eclipsed Merrow,,,"['Merfolk', 'Scout']",[],"When this creature enters, look at the top four cards of your library. You may reveal a Merfolk, Plains, or Island card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.",Creature — Merfolk Scout,['Creature'],2,3,,,ECL,['default'],,,,,,,,,,,,,,,,
+['B'],['B'],3.0,['Scry'],{2}{B},Lord Skitter's Butcher,"When Lord Skitter's Butcher enters the battlefield, choose one —
+• Create a 1/1 black Rat creature token with ""This creature can't block.""
+• You may sacrifice another creature. If you do, scry 2, then draw a card.
+• Creatures you control gain menace until end of turn.",Creature – Rat Peasant,"['Rat', 'Peasant']",[],"When this creature enters, choose one —
+• Create a 1/1 black Rat creature token with ""This token can't block.""
+• You may sacrifice another creature. If you do, scry 2, then draw a card.
+• Creatures you control gain menace until end of turn.",Creature — Rat Peasant,['Creature'],2,3,,,WOE,['default'],,,,,,,,,,,,,,,,
+['B'],[],0.0,,,Swamp,,Basic Land – Swamp,['Swamp'],['Basic'],({T}: Add {B}.),Basic Land — Swamp,['Land'],,,['B'],,BLB,['default'],,,,,,,,,,,,,,,,
+['B'],[],0.0,,,Swamp,,Basic Land – Swamp,['Swamp'],['Basic'],({T}: Add {B}.),Basic Land — Swamp,['Land'],,,['B'],,BLB,['default'],,,,,,,,,,,,,,,,
+['B'],[],0.0,,,Swamp,,Basic Land – Swamp,['Swamp'],['Basic'],({T}: Add {B}.),Basic Land — Swamp,['Land'],,,['B'],,BLB,['default'],,,,,,,,,,,,,,,,
+['B'],[],0.0,,,Swamp,,Basic Land – Swamp,['Swamp'],['Basic'],({T}: Add {B}.),Basic Land — Swamp,['Land'],,,['B'],,BLB,['default'],,,,,,,,,,,,,,,,
+['B'],[],0.0,,,Swamp,,Basic Land – Swamp,['Swamp'],['Basic'],({T}: Add {B}.),Basic Land — Swamp,['Land'],,,['B'],,BLB,['default'],,,,,,,,,,,,,,,,
+['B'],[],0.0,,,Swamp,,Basic Land – Swamp,['Swamp'],['Basic'],({T}: Add {B}.),Basic Land — Swamp,['Land'],,,['B'],,BLB,['default'],,,,,,,,,,,,,,,,
+['G'],[],0.0,,,Forest,,Basic Land – Forest,['Forest'],['Basic'],({T}: Add {G}.),Basic Land — Forest,['Land'],,,['G'],,BLB,['default'],,,,,,,,,,,,,,,,
+['G'],[],0.0,,,Forest,,Basic Land – Forest,['Forest'],['Basic'],({T}: Add {G}.),Basic Land — Forest,['Land'],,,['G'],,BLB,['default'],,,,,,,,,,,,,,,,
+['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,,
+['R'],[],0.0,,,Mountain,,Basic Land – Mountain,['Mountain'],['Basic'],({T}: Add {R}.),Basic Land — Mountain,['Land'],,,['R'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
+['W'],[],0.0,,,Plains,,Basic Land – Plains,['Plains'],['Basic'],({T}: Add {W}.),Basic Land — Plains,['Land'],,,['W'],,BLB,['default'],,,,,,,,,,,,,,,,
