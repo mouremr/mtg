@@ -44,6 +44,12 @@ def play_games(deck_records, max_turns, best_of, verbose, k=32):
             gameLoop = GameLoop(rec_a.cards, rec_b.cards, verbose=verbose)
             winner = gameLoop.run(max_turns=max_turns)
             if winner is not None:
+                # update deck record with winning turn
+                winning_record = rec_a if winner == 0 else rec_b
+                game_end_turn = gameLoop.state.turn
+                winning_record.match_history["win_turns"].append(game_end_turn)
+                
+                # update elo
                 score_a = 1.0 if winner == 0 else 0.0
                 rec_a.elo, rec_b.elo = update_elo(rec_a.elo, rec_b.elo, score_a, k=k)
             games_played += 1
@@ -66,16 +72,16 @@ def evaluate_vs_benchmarks(deck_records, benchmarks, max_turns, games_per_matchu
         results[rec.id] = wins / total if total else 0.0
     return results
 
-def create_winning_deck_csv(ranked):
-    best = ranked[0]  # already sorted by elo, descending
-    best.deck_df.to_csv('best_deck.csv', index=False)
+
+
 
 
 if __name__ == "__main__":
-    generation_stats = []
+    generation_stats = [] #overall gen stats
+    winner_stats = [] #tracks top elo decks composition
 
-    num_decks = 20
-    num_generations = 15
+    num_decks = 15
+    num_generations = 25
     num_benchmarks = 10
     verbose = False;
 
@@ -108,7 +114,7 @@ if __name__ == "__main__":
     for code in set_codes:
         filepath = rf"E:\Python\mtg\Set_json\{code}.json"
         set_df = load_data(filepath)
-        set_df["setCode"] = code  # tag origin before merging, in case you want it later
+        set_df["setCode"] = code 
         set_dataframes.append(set_df)
 
     Constants.TOTAL_CARDPOOL = pd.concat(set_dataframes, ignore_index=True)
@@ -116,31 +122,50 @@ if __name__ == "__main__":
 
     print(f"Loaded {len(Constants.TOTAL_CARDPOOL)} unique cards across {len(set_codes)} sets.")
 
-    deck_records = [DeckRecord(construct_deck(Constants.TOTAL_CARDPOOL, 31, 44)) for _ in range(num_decks)]
+    
+    deck_records = [
+        DeckRecord(construct_deck(Constants.TOTAL_CARDPOOL, 31, 44), id=f"G0_{i}", origin_type="Initial") 
+        for i in range(num_decks)
+    ]
 
-    benchmark_decks = [DeckRecord(construct_deck(Constants.TOTAL_CARDPOOL, 31, 44)) for _ in range(num_benchmarks)]
-    for bench in benchmark_decks:
-        bench.cards = deck_to_cards(bench.deck_df)
+    benchmark_decks = [
+        DeckRecord(construct_deck(Constants.TOTAL_CARDPOOL, 31, 44), id=f"BENCH_{i}", origin_type="Benchmark") 
+        for i in range(num_benchmarks)
+    ]
 
+    for benchmark in benchmark_decks:
+        benchmark.cards = deck_to_cards(benchmark.deck_df)
+
+    #RUN SIM
     for gen in range(num_generations):
         for rec in deck_records:
             rec.cards = deck_to_cards(rec.deck_df)
 
-        play_games(deck_records, 25, 5, verbose)  #play against decks in current generation, update overall elo score
+        play_games(deck_records, 25, 5, verbose)  #play against decks in current generation update overall elo score
 
         bench_results = evaluate_vs_benchmarks(deck_records, benchmark_decks, max_turns=25)
 
         ranked = sorted(deck_records, key=lambda r: r.elo, reverse=True)
-        print(f"Generation {gen + 1} Elo:\n" +
+        print(f"Generation {gen} Elo:\n" +
               "\n".join(f"deck {r.id}: {r.elo:.1f} | vs benchmarks: {bench_results[r.id]:.2%}" for r in ranked))
 
         generation_stats = update_generation_stats(generation_stats, deck_records, bench_results, gen)
+        winner_stats.append(update_winner_stats(generation_stats, ranked[0], gen = gen + 1))
 
-        deck_records = evaluate_decks(deck_records, 0.5, 0.25)
+        deck_records = evaluate_decks(deck_records, 0.5, 0.25, gen = gen + 1)
 
-    generate_plot_overall(generation_stats)
+    best = ranked[0]
+    stats = update_winner_stats(generation_stats, best, gen = gen)
+    final_stats = update_winner_stats(generation_stats, best, gen=num_generations)
+    print("\n--- Final Winning Deck Stats ---")
+    for stat, val in final_stats.items():
+        print(f"{stat}: {val}")
+    
+    # generate_plot_overall(generation_stats)
+    generate_plot_winner(winner_stats)
 
-    create_winning_deck_csv(ranked)
+    
+    best.deck_df.to_csv('best_deck.csv', index=False)
     
     
 

@@ -6,37 +6,43 @@ from DeckBuilding import construct_manabase, DeckRecord
 from Constants import BASIC_NAMES
 
 
-def evaluate_decks(deck_records, percent_keep, percent_mutate):
+def evaluate_decks(deck_records, percent_keep, percent_mutate, gen):
     total = len(deck_records)
     ranked = sorted(deck_records, key=lambda r: r.elo, reverse=True)
 
-    elitism_count = min(2, len(ranked))
-    elites = ranked[:elitism_count]
+    winner_count = min(2, len(ranked))
+    winners = ranked[:winner_count]
 
-    amount_to_keep = int(total * percent_keep) - elitism_count
+    for deck in winners:
+        deck.origin_type = "winner"
+
+    amount_to_keep = int(total * percent_keep) - winner_count
     amount_to_mutate = int(total * percent_mutate)
 
-    if amount_to_keep > len(ranked) - elitism_count:
-        shortfall = amount_to_keep - (len(ranked) - elitism_count)
-        amount_to_keep = len(ranked) - elitism_count
+    if amount_to_keep > len(ranked) - winner_count:
+        shortfall = amount_to_keep - (len(ranked) - winner_count)
+        amount_to_keep = len(ranked) - winner_count
         amount_to_mutate += shortfall
 
-    amount_to_crossover = total - amount_to_keep - amount_to_mutate - elitism_count
+    amount_to_crossover = total - amount_to_keep - amount_to_mutate - winner_count
 
-    kept = ranked[elitism_count:elitism_count + amount_to_keep]
-    mutated = mutate_decks(ranked, amount_to_mutate)
-    crossover = crossover_decks(ranked, amount_to_crossover, tournament_size=3)
+    kept = ranked[winner_count:winner_count + amount_to_keep]
+    for k in kept:
+        k.origin_type = "Kept"
 
-    new_records = list(elites) + list(kept) + mutated + crossover
+    mutated = mutate_decks(ranked, amount_to_mutate, gen=gen)
+    crossover = crossover_decks(ranked, amount_to_crossover, tournament_size=3, gen=gen)
 
-    assert len(new_records) == total, (
-        f"Population size drifted: expected {total}, got {len(new_records)} "
-        f"(keep={len(kept)}, mutate={len(mutated)}, crossover={len(crossover)})"
-    )
+    new_records = list(winners) + list(kept) + mutated + crossover
+
+    for idx, rec in enumerate(new_records):
+        rec.id = f"G{gen}_{idx:02d}"
+
+    assert len(new_records) == total, f"Population size drifted: expected {total}, got {len(new_records)}"
     return new_records
 
 
-def mutate_decks(ranked_records, num_decks, num_swaps=2, color_mutation_rate=0.10):
+def mutate_decks(ranked_records, num_decks, gen, num_swaps=2):
     mutated = []
     top_records = ranked_records[:num_decks]
 
@@ -48,12 +54,11 @@ def mutate_decks(ranked_records, num_decks, num_swaps=2, color_mutation_rate=0.1
     for parent in top_records:
         df = parent.deck_df.copy()
         
-        # Determine current color identity
+        #determine current color identity
         colors = set(df['colorIdentity'].explode().dropna().unique().tolist())
         current_color_count = len(colors)
 
-        # Dynamic mutation rate: high for mono-color, scaling down to near-zero for 4+ colors
-        # 1 color -> 25% chance | 2 colors -> 10% chance | 3 colors -> 2% chance | 4+ colors -> 0%
+
         if current_color_count == 1:
             dynamic_color_rate = 0.25
         elif current_color_count == 2:
@@ -63,7 +68,7 @@ def mutate_decks(ranked_records, num_decks, num_swaps=2, color_mutation_rate=0.1
         else:
             dynamic_color_rate = 0.00
         
-        # Apply the scaled splash chance
+        #apply color splash
         if random.random() < dynamic_color_rate:
             all_colors = {'W', 'U', 'B', 'R', 'G'}
             available_to_add = list(all_colors - colors)
@@ -82,7 +87,6 @@ def mutate_decks(ranked_records, num_decks, num_swaps=2, color_mutation_rate=0.1
 
             target_cmc = dropped_card['faceManaValue'].values[0] if 'faceManaValue' in dropped_card else 3
 
-            # Candidates must match our (potentially expanded) color set
             candidates = Constants.TOTAL_CARDPOOL[
                 ~Constants.TOTAL_CARDPOOL['name'].isin(BASIC_NAMES) &
                 Constants.TOTAL_CARDPOOL['colorIdentity'].apply(
@@ -105,13 +109,22 @@ def mutate_decks(ranked_records, num_decks, num_swaps=2, color_mutation_rate=0.1
 
         df = df[~df['name'].isin(BASIC_NAMES)].reset_index(drop=True)
         df = construct_manabase(df)
+        history_entry = f"{parent.id}->M{gen}"
+        new_history = parent.lineage_history + [history_entry]
 
-        mutated.append(DeckRecord(df, elo=parent.elo))
+        mutated.append(DeckRecord(
+            df, 
+            elo=parent.elo,
+            id=f"temp_mut_{gen}",  # Will be overwritten cleanly by evaluate_decks
+            parent_ids=[parent.id],
+            origin_type="Mutation",
+            lineage_history=new_history
+        ))
 
     return mutated
 
 
-def crossover_decks(ranked_records, amount_to_crossover, tournament_size):
+def crossover_decks(ranked_records, amount_to_crossover, tournament_size, gen):
     """picks candidate decks to crossover"""
     children = []
 
@@ -123,11 +136,24 @@ def crossover_decks(ranked_records, amount_to_crossover, tournament_size):
             parents.append(best)
 
         if parents[0].deck_df.equals(parents[1].deck_df):
-            children.append(mutate_decks(ranked_records, 1)[0])
+            children.append(mutate_decks(ranked_records, 1, gen = gen)[0])
         else:
-            child_df = breed_decks(parents[0].deck_df, parents[1].deck_df)
+            p1 = parents[0]
+            p2 = parents[1]
+
+            child_df = breed_decks(p1.deck_df, p2.deck_df)
             child_elo = (parents[0].elo + parents[1].elo) / 2
-            children.append(DeckRecord(child_df, elo=child_elo))
+            history_entry = f"Breed({p1.id}+{p2.id})_G{gen}"
+            new_history = list(set(p1.lineage_history + p2.lineage_history)) + [history_entry]
+
+            children.append(DeckRecord(
+                child_df, 
+                elo=child_elo,
+                id=f"temp_cross_{gen}",
+                parent_ids=[p1.id, p2.id],
+                origin_type="Crossover",
+                lineage_history=new_history
+            ))
 
     return children
 
@@ -137,7 +163,6 @@ def breed_decks(parent1, parent2, num_cards=36):
     p1_nonbasics = parent1[~parent1['name'].isin(BASIC_NAMES)]
     p2_nonbasics = parent2[~parent2['name'].isin(BASIC_NAMES)]
     
-    # 1. Start with cards they have in common (the "consensus" core)
     common_names = set(p1_nonbasics['name']).intersection(set(p2_nonbasics['name']))
     
     for card_name in common_names:
@@ -149,7 +174,7 @@ def breed_decks(parent1, parent2, num_cards=36):
         rows_to_add = pd.DataFrame([card_row] * num_to_add)
         new_deck = pd.concat([new_deck, rows_to_add], ignore_index=True)
         
-    # skew remaining cards towards one parent to keep archetypes intact
+    # skew remaining cards towards one parent
     dominant_parent = p1_nonbasics if random.random() < 0.5 else p2_nonbasics
     secondary_parent = p2_nonbasics if dominant_parent is p1_nonbasics else p1_nonbasics
     
@@ -159,7 +184,7 @@ def breed_decks(parent1, parent2, num_cards=36):
     remaining_slots = num_cards - len(new_deck)
     
     for _ in range(remaining_slots):
-        # Prefer the parents' un-shared cards
+        # prefer the parents unshared cards
         if not parent_pool.empty:
             candidate = parent_pool.sample(1)
             name = candidate['name'].values[0]
@@ -169,7 +194,7 @@ def breed_decks(parent1, parent2, num_cards=36):
                 parent_pool = parent_pool.drop(candidate.index[0]).reset_index(drop=True)
                 continue
 
-        # Fallback to general database if parent pool is exhausted or invalid
+        #fallback to general database if parent pool is exhausted or invalid
         source = Constants.TOTAL_CARDPOOL[~Constants.TOTAL_CARDPOOL['name'].isin(BASIC_NAMES)]
         while True:
             candidate = source.sample(1)

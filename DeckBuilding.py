@@ -68,13 +68,29 @@ def construct_manabase(deck):
 
 
 class DeckRecord:
-    _id_counter = count()
-
-    def __init__(self, deck_df, elo=1200, id=None):
-        self.id = id if id is not None else next(DeckRecord._id_counter)
+    def __init__(self, deck_df, elo=1200, id=None, parent_ids=None, origin_type="Initial", lineage_history=None):
         self.deck_df = deck_df
         self.elo = elo
-        self.cards = None  # populated each generation before play
+        self.cards = None
+        
+        
+        self.id = id  # e.g., "G12_D04"
+        
+        #ID tracking
+        self.parent_ids = parent_ids if parent_ids is not None else []
+        self.origin_type = origin_type
+        
+        
+        if lineage_history is not None:
+            self.lineage_history = lineage_history
+        else:
+            self.lineage_history = [id] if id else []
+
+        self.match_history = {
+            "win_turns": [],
+            "mana_wasted": [],
+            "games_played": 0
+        }
 
     def __repr__(self):
-        return f"DeckRecord(id={self.id}, elo={self.elo:.1f})"
+        return f"Deck[{self.id}] ({self.origin_type[0]} | Elo: {self.elo:.1f})"
